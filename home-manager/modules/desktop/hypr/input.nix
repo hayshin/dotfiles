@@ -1,0 +1,15 @@
+{
+  kb_layout = "us,ru";
+  kb_options = "grp:alt_shift_toggle";
+
+  numlock_by_default = true;
+
+  follow_mouse = 1;
+
+  touchpad = {
+    disable_while_typing = true;
+    natural_scroll = true;
+    scroll_factor = 0.2;
+  };
+  accel_profile = "flat";
+}
