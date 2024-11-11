@@ -1,6 +1,8 @@
 {
-  "$mod" = "SUPER";
-  "$float_terminal" = "[float;pin;move onscreen cursor 50% 60%;opacity 0.8 override 0.5 override;rounding 0] $TERMINAL";
+
+  bindr = [
+    "$mod,Super_L, exec, pkill -SIGUSR1 waybar"
+  ];
 
   bindl = [ " , switch:[switch name], exec, hyprlock" ];
 
@@ -23,10 +25,6 @@
     "$mod, Control_L, movewindow"
     "$mod, mouse:273, resizewindow"
     "$mod, ALT_L, resizewindow"
-  ];
-
-  bindr = [
-    "$mod,Super_L, exec, pkill -SIGUSR1 waybar"
   ];
 
   bind =

@@ -1,27 +1,27 @@
 * {
   min-height: 0;
-  font-family: JetBrains Mono NL, JetBrainsMonoNerd Font, FontAwesome;
+  /* font-family: JetBrains Mono NL, JetBrainsMonoNerd Font, FontAwesome; */
   font-size: 12px;
   font-weight: 900;
 }
 
 window#waybar {
-    transition: all 0.5s;
-    opacity: 1;
-    margin-top: 0;
-    background-color: rgba(0,0,0,0);
+  transition: all 0.5s;
+  opacity: 1;
+  margin-top: 0;
+  /* background-color: rgba(0, 0, 0, 0); */
 }
 
 window#waybar.hidden {
-    opacity: 0;
-    margin-top: -50px;
+  opacity: 0;
+  margin-top: -50px;
 }
 
 #workspaces {
-  background-color: rgba(0, 0, 0, 1);
+  /* background-color: rgba(0, 0, 0, 1); */
   padding-left: 10px;
   padding-right: 15px;
-  /* border-bottom-right-radius: 16px; */
+  border-bottom-right-radius: 16px;
   border-top-right-radius: 16px;
 }
 
@@ -30,7 +30,7 @@ window#waybar.hidden {
   margin: 3px 3px;
   border-radius: 16px;
   border: 0px;
-  background-color: rgba(0, 0, 0, 1);
+  /* background-color: rgba(0, 0, 0, 1); */
 
   transition: all 0.2s ease-in-out;
   color: #ffffff;
@@ -58,10 +58,10 @@ window#waybar.hidden {
 #clock,
 #custom-power,
 #network {
-  background-color: rgba(0, 0, 0, 1);
+  /* background-color: rgba(0, 0, 0, 1); */
   padding-right: 10px;
   padding-left: 10px;
-  color: #ffffff;
+  /* color: #ffffff; */
 }
 
 #mpris {
@@ -78,7 +78,7 @@ window#waybar.hidden {
 }
 
 #pulseaudio {
-  /* border-bottom-left-radius: 16px; */
+  border-bottom-left-radius: 16px;
   border-top-left-radius: 16px;
 }
 

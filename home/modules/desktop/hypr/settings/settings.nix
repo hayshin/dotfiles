@@ -1,6 +1,11 @@
+let
+  binds = import ./binds.nix;
+in
 {
-  imports = [ ./binds ];
+  "$mod" = "SUPER";
+  "$float_terminal" = "[float;pin;move onscreen cursor 50% 60%;opacity 0.8 override 0.5 override;rounding 0] $TERMINAL";
 
+  inherit binds;
   general = import ./general.nix;
   decoration = import ./decoration.nix;
   animations = import ./animations.nix;

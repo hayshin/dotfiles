@@ -1,7 +1,7 @@
 {
   imports = [
     ./paper.nix
-    ./lock.nix
+    ./idle.nix
   ];
   wayland.windowManager.hyprland = {
     enable = true;

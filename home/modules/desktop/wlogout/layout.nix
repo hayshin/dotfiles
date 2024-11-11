@@ -19,7 +19,7 @@
   }
   {
     label = "lock";
-    action = "loginctl lock-session";
+    action = "$LOCK";
     text = "Lock";
     keybind = "l";
   }

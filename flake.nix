@@ -37,7 +37,7 @@
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [
           stylix.homeManagerModules.stylix
-          ./home-manager/home.nix
+          ./home/home.nix
         ];
       };
     };

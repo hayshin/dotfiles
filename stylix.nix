@@ -9,6 +9,7 @@ in
     image = wallpaper;
     polarity = "dark";
 
+    targets.swaylock.enable = false;
     # base16Scheme = {
     #   base00 = "282828";
     #   base01 = "3c3836";
