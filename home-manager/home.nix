@@ -28,7 +28,7 @@
     sessionVariables = {
       EDITOR = "hx";
       BROWSER = "firefox";
-      TERMINAL = "wezterm";
+      TERMINAL = "kitty";
     };
     # activation.restartHyprpaper = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     #   if systemctl --user is-active --quiet hyprpaper.service; then
