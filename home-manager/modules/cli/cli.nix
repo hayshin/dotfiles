@@ -3,7 +3,7 @@
     ./helix/helix.nix
     ./yazi/yazi.nix
     ./zsh.nix
-    ./alacritty.nix
+    ./kitty.nix
     ./git.nix
   ];
 }

@@ -17,7 +17,6 @@
       pavucontrol
       wlogout
       webcord
-      wpaperd
       btop
       obs-studio
       vlc
@@ -29,13 +28,12 @@
     sessionVariables = {
       EDITOR = "hx";
       BROWSER = "firefox";
-      TERMINAL = "alacritty";
+      TERMINAL = "wezterm";
     };
-    activation.clearTofiCache = lib.mkAfter ''
-      rm -f ~/.cache/tofi-drun
-      rm -f ~/.cache/tofi-compgen
-    '';
-  };
 
-  imports = [ ./modules/modules.nix ];
+  };
+  imports = [
+    ./stylix.nix
+    ./modules/modules.nix
+  ];
 }

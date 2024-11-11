@@ -1,7 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ];
+  imports = [
+    ./stylix
+    ./hardware-configuration.nix
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -50,12 +53,14 @@
     git
     zsh
     gh
+    zip
+    unzip
   ];
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     EDITOR = "hx";
-    TERMINAL = "alacritty";
+    TERMINAL = "wezterm";
   };
 
   hardware = {

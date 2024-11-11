@@ -10,7 +10,7 @@
       in
       {
         rebuild = "sudo nixos-rebuild switch --flake ${flakeDir}";
-        update = "nix flake update ${flakeDir}";
+        update = "sudo nix flake update ${flakeDir}";
         upgrade = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
         home-rebuild = "home-manager switch --flake ${flakeDir}";
       };

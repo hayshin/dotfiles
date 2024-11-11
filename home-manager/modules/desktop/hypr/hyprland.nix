@@ -6,7 +6,6 @@
     settings = {
       exec-once = [
         "waybar"
-        "wpaperd"
         "wl-paste --type text --watch cliphist store" # Stores only text data
         "wl-paste --type image --watch cliphist store" # Stores only image data
       ];
@@ -43,7 +42,7 @@
       };
 
       "$mod" = "SUPER";
-      "$terminal" = "alacritty";
+      "$terminal" = "kitty";
       "$file_manager" = "yazi";
       "$menu" = "fuzzel";
       "$editor" = "hx";

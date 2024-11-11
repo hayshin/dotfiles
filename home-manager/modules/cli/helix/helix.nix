@@ -9,6 +9,12 @@
       rust-analyzer
       rustfmt
       cargo
+      nodePackages.svelte-language-server
+      nodePackages.typescript-language-server
+      vscode-langservers-extracted
+      nodePackages.prettier
+      nodePackages.typescript
+      emmet-ls
     ];
     languages = {
       language = [
@@ -22,7 +28,7 @@
       ];
     };
     settings = {
-      theme = "base16_default";
+      # theme = "base16_default";
       editor = import ./editor.nix;
       keys = import ./keys.nix;
     };
