@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  wallpaper = ./wallpaper.jpg;
+  wallpaper = ./wallpaper.png;
 in
 {
   stylix = {

@@ -3,7 +3,7 @@
     ./cliphist.nix
     ./mpv.nix
     ./fuzzel.nix
-    ./hypr/hyprland.nix
+    ./hypr/hypr.nix
     ./waybar/waybar.nix
     ./wlogout/wlogout.nix
   ];
