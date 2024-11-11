@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  wallpaper = /home/hayshin/nix/menhera.jpg;
+  wallpaper = ./menhera.jpg;
 in
 {
   stylix = {
@@ -27,29 +27,29 @@ in
       base0E = "d3869b";
       base0F = "d65d0e";
     };
-  };
 
-  cursor = {
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Ice";
-  };
+    cursor = {
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Ice";
+    };
 
-  fonts = {
-    monospace = {
-      package = pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; };
-      name = "JetBrainsMono Nerd Font Mono";
+    fonts = {
+      monospace = {
+        package = pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; };
+        name = "JetBrainsMono Nerd Font Mono";
+      };
+      sansSerif = {
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Sans";
+      };
+      serif = {
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Serif";
+      };
     };
-    sansSerif = {
-      package = pkgs.dejavu_fonts;
-      name = "DejaVu Sans";
-    };
-    serif = {
-      package = pkgs.dejavu_fonts;
-      name = "DejaVu Serif";
-    };
-  };
 
-  opacity = {
-    terminal = 0.9;
+    opacity = {
+      terminal = 0.9;
+    };
   };
 }

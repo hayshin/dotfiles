@@ -33,7 +33,7 @@
 
   };
   imports = [
-    ./stylix.nix
+    ../stylix.nix
     ./modules/modules.nix
   ];
 }

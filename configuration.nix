@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./stylix
+    ./stylix.nix
     ./hardware-configuration.nix
   ];
 
