@@ -1,3 +1,6 @@
 {
-  imports = [./fusuma.nix ];
+  imports = [
+    ./fusuma.nix
+    ./gammastep.nix
+  ];
 }

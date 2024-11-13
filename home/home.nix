@@ -26,12 +26,7 @@
       pulseaudio
       brightnessctl
     ];
-    sessionVariables = {
-      EDITOR = "hx";
-      BROWSER = "firefox";
-      TERMINAL = "kitty";
-      LOCK = "~/nix/home/modules/desktop/lock.sh";
-    };
+    sessionVariables = import ../variables.nix;
     # activation.restartHyprpaper = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     #   if systemctl --user is-active --quiet hyprpaper.service; then
     #     systemctl --user restart hyprpaper.service

@@ -19,7 +19,7 @@
   }
   {
     label = "lock";
-    action = "$LOCK";
+    action = "lock";
     text = "Lock";
     keybind = "l";
   }

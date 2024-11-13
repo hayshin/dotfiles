@@ -1,6 +1,6 @@
-#!/bin/sh
-
-swaylock \
+{ pkgs, ... }:
+pkgs.writeShellScriptBin "lock" ''
+  ${pkgs.swaylock-effects}/bin/swaylock \
     --hide-keyboard-layout \
     --disable-caps-lock-text \
     --indicator-radius 100 \
@@ -27,3 +27,4 @@ swaylock \
     --indicator \
     --screenshots \
     --effect-blur 5x2
+''

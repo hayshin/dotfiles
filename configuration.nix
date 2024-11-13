@@ -6,17 +6,20 @@
     ./hardware-configuration.nix
   ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
+  };
 
-  networking.hostName = "hayshin"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  networking.networkmanager.enable = true;
+  networking = {
+    hostName = "hayshin"; # Define your hostname.
+    networkmanager.enable = true;
+    # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  };
 
   time.timeZone = "Asia/Tashkent";
 
-  i18n.defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = "en_GB.UTF-8";
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_GB.UTF-8";
@@ -31,7 +34,7 @@
   };
 
   users.users.hayshin = {
-    shell = pkgs.zsh;
+    shell = pkgs.nushell;
     isNormalUser = true;
     description = "hayshin";
     extraGroups = [
@@ -42,34 +45,27 @@
     ];
   };
 
-  nixpkgs.config.allowUnfree = true;
+  environment = {
+    systemPackages = with pkgs; [
+      wget
+      helix
+      home-manager
+      hyprland
+      git
+      zsh
+      nushell
+      gh
+      zip
+      unzip
 
-  environment.systemPackages = with pkgs; [
-    wget
-    helix
-    home-manager
-    vscode
-    hyprland
-    git
-    zsh
-    gh
-    zip
-    unzip
-  ];
+      (import ./scripts/lock.nix { inherit pkgs; })
+    ];
 
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-    EDITOR = "hx";
-    TERMINAL = "kitty";
-    FILE_MANAGER = "yazi";
-    MENU = "fuzzel";
-    LOGOUT = "wlogout -b 4 -T 300 -B 300 -p layer-shell -s";
-    BROWSER = "firefox";
-    CLIPBOARD = "cliphist list | $MENU --dmenu | cliphist decode | wl-copy";
+    sessionVariables = import ./variables.nix;
   };
 
   hardware = {
-    opengl.enable = true;
+    graphics.enable = true;
   };
 
   services = {
@@ -81,12 +77,14 @@
         wayland = true;
       };
     };
+
     pipewire = {
       enable = true;
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
     };
+
     getty.autologinUser = "hayshin";
   };
 
@@ -95,18 +93,21 @@
       enable = true;
       xwayland.enable = true;
     };
+
     zsh.enable = true;
   };
 
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix = {
+    settings.experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
 
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 30d";
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 30d";
+    };
   };
 
   fonts.packages = with pkgs; [
