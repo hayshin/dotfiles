@@ -25,7 +25,18 @@
             command = "nixfmt";
           };
         }
+        # {
+        # name = "java";
+        # roots = [
+        #   "pom.xml"
+        #   "build.gradle"
+        # ];
+        # language-servers = {
+        #   command = "jdtls";
+        # };
+        # }
       ];
+
     };
     settings = {
       # theme = "base16_default";

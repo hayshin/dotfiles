@@ -1,4 +1,5 @@
 {
+  NIX = "/home/hayshin/nix";
   EDITOR = "hx";
   TERMINAL = "kitty";
   FILE_MANAGER = "yazi";

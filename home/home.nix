@@ -6,6 +6,9 @@
     homeDirectory = "/home/hayshin";
     stateVersion = "24.05";
     packages = with pkgs; [
+      jetbrains.idea-ultimate
+      jetbrains.pycharm-professional
+      shotcut
       swaylock-effects
       firefox
       fusuma
@@ -36,6 +39,7 @@
     # '';
 
   };
+  nixpkgs.config.allowUnfree = true;
   imports = [
     ../stylix.nix
     ./modules/modules.nix

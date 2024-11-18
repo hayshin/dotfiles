@@ -5,6 +5,7 @@
     # ./stylix.nix
     ./hardware-configuration.nix
   ];
+  stylix = import ./stylix.nix;
 
   boot.loader = {
     systemd-boot.enable = true;
@@ -45,6 +46,7 @@
     ];
   };
 
+  nixpkgs.config.allowUnfree = true;
   environment = {
     systemPackages = with pkgs; [
       wget
