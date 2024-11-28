@@ -1,5 +1,6 @@
 {
   imports = [
+    ./xdg.nix
     ./cliphist.nix
     ./mpv.nix
     ./fuzzel.nix

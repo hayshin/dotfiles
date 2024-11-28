@@ -2,10 +2,9 @@
 
 {
   imports = [
-    # ./stylix.nix
+    ./stylix.nix
     ./hardware-configuration.nix
   ];
-  stylix = import ./stylix.nix;
 
   boot.loader = {
     systemd-boot.enable = true;

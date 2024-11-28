@@ -6,6 +6,10 @@
     homeDirectory = "/home/hayshin";
     stateVersion = "24.05";
     packages = with pkgs; [
+      maven
+
+      linuxKernel.packages.linux_6_11.perf
+      libreoffice
       jetbrains.idea-ultimate
       jetbrains.pycharm-professional
       shotcut
