@@ -1,5 +1,5 @@
 {
-  options.editorconfig = {
+  editorconfig = {
     enable = true;
     settings = {
       "*" = {

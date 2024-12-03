@@ -1,21 +1,20 @@
 { config, ... }:
+let
+  home = config.home.homeDirectory;
+in
 {
-  options.xdg = {
+  xdg = {
     enable = true;
-    userDirs =
-      let
-        home = config.home.homeDirectory;
-      in
-      {
-        enable = true;
-        desktop = "${home}/desktop";
-        documents = "${home}/documents";
-        download = "${home}/download";
-        music = "${home}/music";
-        pictures = "${home}/pictures";
-        videos = "${home}/videos";
-        templates = "${home}/templates";
-        publicShare = "${home}/public";
-      };
+    userDirs = {
+      enable = true;
+      desktop = "${home}/desktop";
+      documents = "${home}/documents";
+      download = "${home}/downloads";
+      music = "${home}/music";
+      pictures = "${home}/images";
+      videos = "${home}/videos";
+      templates = "${home}/templates";
+      publicShare = "${home}/public";
+    };
   };
 }

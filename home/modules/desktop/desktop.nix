@@ -1,5 +1,7 @@
 {
   imports = [
+    ./wob.nix
+    ./imv.nix
     ./xdg.nix
     ./cliphist.nix
     ./mpv.nix

@@ -1,23 +1,26 @@
+let
+  swayosd = "swayosd-client";
+in
 {
 
   bindr = [
     "$mod,Super_L, exec, pkill -SIGUSR1 waybar"
   ];
 
-  bindl = [ " , switch:[switch name], exec, hyprlock" ];
+  bindl = [ " , switch:Lid Switch, exec, lock" ];
 
   binde = [
-    "$mod, semicolon, exec, brightnessctl -q s 5%-"
-    "$mod, apostrophe, exec, brightnessctl -q s 5%+"
+    "$mod, apostrophe, exec, ${swayosd} --brightness raise"
+    "$mod, semicolon, exec, ${swayosd} --brightness lower"
 
-    "$mod, bracketleft, exec, pactl set-sink-volume @DEFAULT_SINK@ -5%"
-    "$mod, bracketright, exec, pactl set-sink-volume @DEFAULT_SINK@ +5%"
+    "$mod, bracketright, exec, ${swayosd} --output-volume raise"
+    "$mod, bracketleft, exec, ${swayosd} --output-volume lower"
 
-    ", XF86MonBrightnessUp, exec, brightnessctl -q s 5%+"
-    ", XF86MonBrightnessDown, exec, brightnessctl -q s 5%-"
+    ", XF86MonBrightnessUp, exec, ${swayosd} --brightness raise"
+    ", XF86MonBrightnessDown, exec, ${swayosd} --brightness loser"
 
-    ", XF86AudioRaiseVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +5%"
-    ", XF86AudioLowerVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    ", XF86AudioRaiseVolume, exec, ${swayosd} --output-volume raise"
+    ", XF86AudioLowerVolume, exec, ${swayosd} --output-volume lower"
   ];
 
   bindm = [
@@ -29,6 +32,18 @@
 
   bind =
     [
+      "$mod, backslash, exec, ${swayosd} --output-volume mute-toggle"
+
+      ", XF86AudioMute, exec, ${swayosd} --output-volume mute-toggle"
+      ", XF86AudioMicMute, exec, ${swayosd} --input-volume mute-toggle"
+
+      ", XF86AudioPlay, exec, playerctl play-pause"
+      ", XF86AudioPause, exec, playerctl pause"
+      ", XF86AudioNext, exec, playerctl next"
+      ", XF86AudioPrev, exec, playerctl previous"
+      # ", XF86Calculator, exec, qalculate-gtk"
+      ", XF86Lock, exec, $lock"
+
       "$mod, RETURN, exec, $TERMINAL"
       "$mod SHIFT, RETURN, exec, $float_terminal"
       "$mod, SPACE, exec, $MENU"
@@ -50,17 +65,6 @@
 
       "$mod, P, exec, hyprshot -m region"
       "$mod SHIFT, P, exec, hyprpicker -a"
-
-      "$mod, backslash, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle"
-
-      ", XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle"
-      ", XF86AudioPlay, exec, playerctl play-pause"
-      ", XF86AudioPause, exec, playerctl pause"
-      ", XF86AudioNext, exec, playerctl next"
-      ", XF86AudioPrev, exec, playerctl previous"
-      ", XF86AudioMicMute, exec, pactl set-source-mute @DEFAULT_SOURCE@ toggle"
-      # ", XF86Calculator, exec, qalculate-gtk"
-      ", XF86Lock, exec, $lock"
 
       "$mod, Q, killactive,"
       "$mod, F, fullscreen,"

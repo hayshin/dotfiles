@@ -27,7 +27,7 @@
       nixosConfigurations.hayshin = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          ./configuration.nix
+          ./nixos/configuration.nix
           stylix.nixosModules.stylix
         ];
 
@@ -36,8 +36,8 @@
       homeConfigurations.hayshin = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [
-          stylix.homeManagerModules.stylix
           ./home/home.nix
+          stylix.homeManagerModules.stylix
         ];
       };
     };

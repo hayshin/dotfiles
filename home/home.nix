@@ -1,39 +1,17 @@
-{ pkgs, lib, ... }:
-
+{ pkgs, ... }:
 {
+  imports = [
+    ../stylix.nix
+    ./modules/modules.nix
+  ];
+
   home = {
     username = "hayshin";
     homeDirectory = "/home/hayshin";
     stateVersion = "24.05";
-    packages = with pkgs; [
-      maven
-
-      linuxKernel.packages.linux_6_11.perf
-      libreoffice
-      jetbrains.idea-ultimate
-      jetbrains.pycharm-professional
-      shotcut
-      swaylock-effects
-      firefox
-      fusuma
-      waybar
-      mako
-      wl-clipboard
-      hyprshot
-      hyprpicker
-      light
-      pavucontrol
-      wlogout
-      webcord
-      btop
-      obs-studio
-      vlc
-      playerctl
-      nodejs
-      pulseaudio
-      brightnessctl
-    ];
+    preferXdgDirectories = true;
     sessionVariables = import ../variables.nix;
+    packages = import ./packages.nix { pkgs = pkgs; };
     # activation.restartHyprpaper = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     #   if systemctl --user is-active --quiet hyprpaper.service; then
     #     systemctl --user restart hyprpaper.service
@@ -44,8 +22,4 @@
 
   };
   nixpkgs.config.allowUnfree = true;
-  imports = [
-    ../stylix.nix
-    ./modules/modules.nix
-  ];
 }
