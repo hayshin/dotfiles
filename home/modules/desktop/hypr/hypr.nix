@@ -1,3 +1,4 @@
+{ config, ... }:
 {
   imports = [
     ./paper.nix
@@ -6,6 +7,6 @@
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-    settings = import ./settings/settings.nix;
+    settings = import ./settings/settings.nix { inherit config; };
   };
 }

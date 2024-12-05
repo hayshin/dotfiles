@@ -1,6 +1,7 @@
 { pkgs, ... }:
 with pkgs;
 [
+  clang-tools
   nil
   nixfmt-rfc-style
   rust-analyzer

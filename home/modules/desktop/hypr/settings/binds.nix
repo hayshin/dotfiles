@@ -1,3 +1,4 @@
+{ config, ... }:
 let
   swayosd = "swayosd-client";
 in
@@ -17,7 +18,7 @@ in
     "$mod, bracketleft, exec, ${swayosd} --output-volume lower"
 
     ", XF86MonBrightnessUp, exec, ${swayosd} --brightness raise"
-    ", XF86MonBrightnessDown, exec, ${swayosd} --brightness loser"
+    ", XF86MonBrightnessDown, exec, ${swayosd} --brightness lower"
 
     ", XF86AudioRaiseVolume, exec, ${swayosd} --output-volume raise"
     ", XF86AudioLowerVolume, exec, ${swayosd} --output-volume lower"
@@ -31,7 +32,18 @@ in
   ];
 
   bind =
+    let
+      picturesDir = config.xdg.userDirs.pictures;
+      screenshotsDir = picturesDir + "/screenshots";
+    in
     [
+      "$mod, PRINT, exec, hyprpicker -a"
+      ", PRINT, exec, hyprshot -m region -o ${screenshotsDir}/screenshots"
+      "SHIFT, PRINT, exec, hyprshot -m output -o ${screenshotsDir}"
+
+      "$mod SHIFT, P, exec, hyprpicker -a"
+      "$mod, P, exec, hyprshot -m region -o ${screenshotsDir}"
+
       "$mod, backslash, exec, ${swayosd} --output-volume mute-toggle"
 
       ", XF86AudioMute, exec, ${swayosd} --output-volume mute-toggle"
@@ -48,23 +60,16 @@ in
       "$mod SHIFT, RETURN, exec, $float_terminal"
       "$mod, SPACE, exec, $MENU"
       "$mod, B, exec, $BROWSER"
-      "$mod, X, exec, $EDITOR"
+      "$mod, X, exec, $TERMINAL -e $EDITOR"
       # "$mod, M, exec, $music"
       "$mod, escape, exec, $LOGOUT"
-      "$mod, E, exec, $FILE_MANAGER"
+      "$mod, E, exec, $TERMINAL -e $FILE_MANAGER"
       "$mod, V, exec, $CLIPBOARD"
 
       ", Pause, exec, playerctl play-pause"
       "$mod, slash, exec, playerctl play-pause"
       "$mod, period, exec, playerctl next"
       "$mod, comma, exec, playerctl previous"
-
-      "$mod, PRINT, exec, hyprpicker -a"
-      ", PRINT, exec, hyprshot -m region"
-      "SHIFT, PRINT, exec, hyprshot -m output"
-
-      "$mod, P, exec, hyprshot -m region"
-      "$mod SHIFT, P, exec, hyprpicker -a"
 
       "$mod, Q, killactive,"
       "$mod, F, fullscreen,"

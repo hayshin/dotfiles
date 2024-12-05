@@ -1,6 +1,22 @@
 { pkgs, ... }:
 with pkgs;
 [
+  devenv
+  fastfetch
+  vscode
+  nil
+  nixfmt-rfc-style
+  rust-analyzer
+  rustfmt
+  cargo
+  gcc
+  nodePackages.svelte-language-server
+  nodePackages.typescript-language-server
+  vscode-langservers-extracted
+  nodePackages.prettier
+  nodePackages.typescript
+  emmet-ls
+  pnpm
   maven
   linuxKernel.packages.linux_6_11.perf
   libreoffice

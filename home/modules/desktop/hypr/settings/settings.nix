@@ -1,5 +1,6 @@
+{ config, ... }:
 let
-  binds = import ./binds.nix;
+  binds = import ./binds.nix { inherit config; };
 in
 {
 

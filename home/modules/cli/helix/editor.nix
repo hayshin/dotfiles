@@ -1,4 +1,5 @@
 {
+  bufferline = "multiple";
   line-number = "relative";
   completion-timeout = 5;
   statusline = {
@@ -9,6 +10,7 @@
   lsp = {
     display-messages = true;
     display-inlay-hints = true;
+    snippets = true;
   };
   file-picker = {
     hidden = false; # false - enable hidden

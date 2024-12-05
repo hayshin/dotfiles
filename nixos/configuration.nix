@@ -1,7 +1,7 @@
-{ config, pkgs, ... }:
-
+{ pkgs, ... }:
 {
   imports = [
+    ./battery.nix
     ./i18n.nix
     ./nix.nix
     ./users/users.nix
@@ -12,6 +12,7 @@
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
+    timeout = 1;
   };
 
   networking = {
@@ -32,6 +33,7 @@
       zsh
       nushell
       gh
+      powertop
       zip
       unzip
       (import ./scripts/lock.nix { inherit pkgs; })
@@ -50,7 +52,20 @@
     };
   };
 
+  security = {
+    # pam = {
+    #   services = {
+    #     gdm.enableGnomeKeyring = true;
+    #   };
+    # };
+    # polkit.enable = true;
+  };
+
   services = {
+    kanata = {
+      enable = true;
+    };
+
     xserver = {
       enable = true;
       xkb.layout = "us";
@@ -76,8 +91,4 @@
   ];
 
   system.stateVersion = "24.05";
-
-  powerManagement = {
-    powertop.enable = true;
-  };
 }

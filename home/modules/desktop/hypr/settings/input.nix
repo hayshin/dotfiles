@@ -2,6 +2,9 @@
   kb_layout = "us,ru";
   kb_options = "grp:alt_shift_toggle";
 
+  repeat_rate = 40;
+  repeat_delay = 600;
+
   numlock_by_default = true;
 
   follow_mouse = 1;
