@@ -1,5 +1,5 @@
 {
   device = "intel_backlight";
-  format = "{percent}% ";
+  format = " {percent}%";
   scroll-step = 0.5;
 }

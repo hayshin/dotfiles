@@ -1,6 +1,8 @@
 { pkgs, ... }:
 {
   imports = [
+    ./kanata/kanata.nix
+    ./audio.nix
     ./battery.nix
     ./i18n.nix
     ./nix.nix
@@ -62,10 +64,6 @@
   };
 
   services = {
-    kanata = {
-      enable = true;
-    };
-
     xserver = {
       enable = true;
       xkb.layout = "us";
@@ -73,13 +71,6 @@
         enable = true;
         wayland = true;
       };
-    };
-
-    pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
     };
 
     getty.autologinUser = "hayshin";

@@ -1,5 +1,5 @@
 {
-  import = [ ./nvidia_gpu-off.nix ];
+  imports = [ ./nvidia_gpu-off.nix ];
   services = {
     # asusd.enable = true;
     thermald.enable = true;

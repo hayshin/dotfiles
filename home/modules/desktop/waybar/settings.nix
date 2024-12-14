@@ -1,9 +1,9 @@
 {
   mainBar = {
     layer = "top";
-    position = "top";
+    position = "bottom";
     start_hidden = true;
-    exclusive = true;
+    exclusive = false;
     spacing = 0;
     reload_style_on_change = false;
 
@@ -14,10 +14,10 @@
     ];
     modules-right = [
       # "mpris"
-      "pulseaudio"
-      "bluetooth"
       "network"
-      "backlight"
+      "pulseaudio"
+      # "bluetooth"
+      # "backlight"
       "battery"
       "clock"
     ];
@@ -25,11 +25,11 @@
     "custom/power" = import ./modules/power.nix;
     tray = import ./modules/tray.nix;
 
-    mpris = import ./modules/mpris.nix;
-    pulseaudio = import ./modules/audio.nix;
-    bluetooth = import ./modules/bluetooth.nix;
+    # mpris = import ./modules/mpris.nix;
     network = import ./modules/network.nix;
-    backlight = import ./modules/backlight.nix;
+    pulseaudio = import ./modules/audio.nix;
+    # bluetooth = import ./modules/bluetooth.nix;
+    # backlight = import ./modules/backlight.nix;
     battery = import ./modules/battery.nix;
     clock = import ./modules/clock.nix;
   };

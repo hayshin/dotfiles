@@ -1,5 +1,6 @@
 {
   imports = [
+    ./starship.nix
     ./direnv.nix
     ./helix/helix.nix
     ./yazi/yazi.nix

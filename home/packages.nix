@@ -1,6 +1,8 @@
 { pkgs, ... }:
 with pkgs;
 [
+  unrar
+  obsidian
   devenv
   fastfetch
   vscode
