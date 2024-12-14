@@ -1,6 +1,6 @@
 {
   imports = [
-    ./wob.nix
+    ./swayosd.nix
     ./imv.nix
     ./xdg.nix
     ./cliphist.nix

@@ -75,10 +75,6 @@ with config.lib.stylix.colors.withHashtag;
         margin-right: 10px;
       }
 
-      #custom-power {
-        font-size: 16px;
-      }
-
       #network {
         border-bottom-left-radius: 16px;
         border-top-left-radius: 16px;
@@ -91,10 +87,6 @@ with config.lib.stylix.colors.withHashtag;
         margin-right: 10px;
       }
 
-      #clock {
-        /* font-weight: 600; */
-        font-size: 14px;
-      }
     '';
   };
   stylix.targets.waybar.enable = false;
