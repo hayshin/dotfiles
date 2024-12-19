@@ -1,6 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 with pkgs;
 [
+  (import ./scripts/lock.nix { inherit pkgs config; })
+  entr
   unrar
   obsidian
   devenv

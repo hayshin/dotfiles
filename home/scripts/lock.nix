@@ -1,4 +1,5 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
+with config.lib.stylix.colors;
 pkgs.writeShellScriptBin "lock" ''
   ${pkgs.swaylock-effects}/bin/swaylock \
     --hide-keyboard-layout \
@@ -6,23 +7,23 @@ pkgs.writeShellScriptBin "lock" ''
     --indicator-radius 100 \
     --indicator-thickness 10 \
     --font "JetBrains Mono"\
-    --ring-color cba6f780 \
-    --ring-ver-color 89b4fa80 \
-    --ring-wrong-color f38ba880 \
-    --ring-clear-color a6e3a180 \
-    --key-hl-color 1e1e2e80 \
-    --bs-hl-color eba0ac80 \
-    --text-color ffffff \
-    --text-caps-lock-color ffffff \
+    --ring-color ${base00} \
+    --ring-ver-color ${base02} \
+    --ring-wrong-color ${base08} \
+    --ring-clear-color ${base01} \
+    --key-hl-color ${base05} \
+    --bs-hl-color ${base04} \
+    --text-color  ${base05} \
+    --text-caps-lock-color  ${base05} \
     --line-color 00000000 \
     --line-ver-color 00000000 \
     --line-wrong-color 00000000 \
     --line-clear-color 00000000 \
     --separator-color 00000000 \
-    --inside-color 00000080 \
-    --inside-ver-color 89b4fa80 \
-    --inside-wrong-color f38ba880 \
-    --inside-clear-color a6e3a180 \
+    --inside-color ${base00} \
+    --inside-ver-color ${base02} \
+    --inside-wrong-color ${base08} \
+    --inside-clear-color ${base01} \
     --clock \
     --indicator \
     --screenshots \

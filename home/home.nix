@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   imports = [
     ../stylix.nix
@@ -11,7 +11,7 @@
     stateVersion = "24.05";
     preferXdgDirectories = true;
     sessionVariables = import ../variables.nix;
-    packages = import ./packages.nix { pkgs = pkgs; };
+    packages = import ./packages.nix { inherit pkgs config; };
     # activation.restartHyprpaper = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     #   if systemctl --user is-active --quiet hyprpaper.service; then
     #     systemctl --user restart hyprpaper.service

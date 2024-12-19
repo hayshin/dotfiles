@@ -1,14 +1,14 @@
 let
-  lock = ./. + "images/lock.png";
-  logout = ./. + "images/logout.png";
-  restart = ./. + "images/restart.png";
-  sleep = ./. + "images/sleep.png";
-  power = ./. + "images/power.png";
-  lock-hover = ./. + "images/lock-hover.png";
-  logout-hover = ./. + "images/logout-hover.png";
-  restart-hover = ./. + "images/restart-hover.png";
-  sleep-hover = ./. + "images/sleep-hover.png";
-  power-hover = ./. + "images/power-hover.png";
+  lock = ./. + "/images/lock.png";
+  logout = ./. + "/images/logout.png";
+  restart = ./. + "/images/restart.png";
+  sleep = ./. + "/images/sleep.png";
+  power = ./. + "/images/power.png";
+  lock-hover = ./. + "/images/lock-hover.png";
+  logout-hover = ./. + "/images/logout-hover.png";
+  restart-hover = ./. + "/images/restart-hover.png";
+  sleep-hover = ./. + "/images/sleep-hover.png";
+  power-hover = ./. + "/images/power-hover.png";
 in
 {
   programs.wlogout = {

@@ -9,13 +9,9 @@
     ./users/users.nix
     ../stylix.nix
     ./hardware-configuration.nix
+    ./boot.nix
+    ./greeter.nix
   ];
-
-  boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
-    timeout = 1;
-  };
 
   networking = {
     hostName = "hayshin";
@@ -38,7 +34,6 @@
       powertop
       zip
       unzip
-      (import ./scripts/lock.nix { inherit pkgs; })
     ];
     sessionVariables = import ../variables.nix;
   };
@@ -54,6 +49,8 @@
     };
   };
 
+  system.stateVersion = "24.05";
+
   security = {
     # pam = {
     #   services = {
@@ -64,22 +61,19 @@
   };
 
   services = {
-    xserver = {
-      enable = true;
-      xkb.layout = "us";
-      displayManager.gdm = {
-        enable = true;
-        wayland = true;
-      };
-    };
-
-    getty.autologinUser = "hayshin";
+    # xserver = {
+    #   enable = true;
+    #   xkb.layout = "us";
+    # displayManager.gdm = {
+    #   enable = true;
+    #   wayland = true;
+    # };
+    # };
   };
 
-  fonts.packages = with pkgs; [
-    font-awesome
-    jetbrains-mono
-  ];
+  # fonts.packages = with pkgs; [
+  #   font-awesome
+  #   jetbrains-mono
+  # ];
 
-  system.stateVersion = "24.05";
 }

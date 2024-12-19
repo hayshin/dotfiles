@@ -1,0 +1,159 @@
+
+
+(defsrc
+
+  esc    1    2    3    4    5    6    7    8    9    0    -    =    bspc
+
+  tab      q    w    e    r    t    y    u    i    o    p    [    ]    \
+
+  caps       a    s    d    f    g    h    j    k    l    ;    '     ret
+
+  lsft         z    x    c    v    b    n    m    ,    .    /        rsft
+
+  lctl   lmet   lalt            spc            ralt   comp   rctl    wkup
+
+)
+
+(defvar
+  tap-timeout 200
+  hold-timeout 200
+  tt $tap-timeout
+  ht $hold-timeout
+)
+
+(defalias
+  mse (layer-switch mouse)
+  qwe (layer-switch qwerty)
+  vim (layer-switch vim)
+  cap (tap-hold $tt $ht (layer-switch vim) (layer-toggle vim))
+  mtg (tap-hold-release $tt $ht m (layer-toggle mouse))
+  btg (tap-hold-release $tt $ht b (layer-toggle vim))
+  spc (tap-hold-release $tt $ht spc (layer-toggle qwerty))
+  qtg (tap-hold-release $tt $ht @qwe (layer-toggle qwerty))
+  alt (layer-toggle layers)
+)
+
+(deflayer qwerty
+
+  esc    1    2    3    4    5    6    7    8    9    0    -    =    bspc
+
+  tab      q    w    e    r    t    y    u    i    o    p    [    ]    \
+
+  @cap       a    s    d    f    g    h    j    k    l    ;    '     ret
+
+  lsft         z    x    c    v    b    n    m    ,    .     /       rsft
+
+  lctl   lmet   lalt             spc            @alt   lmet   rctl    wkup
+
+)
+
+(deflayer layers
+
+  esc    1    2    3    4    5    6    7    8    9    0    -    =    bspc
+
+  tab      q    w    e    r    t    y    u    i    o    p    [    ]    \
+
+  @cap       a s    d    f    g    h    j    k    l    ;    '     ret
+
+  lsft         z    x    c    @vim b n @mse ,    .    /        rsft
+
+  lctl   lmet   lalt            @qwe           ralt   lmet   rctl    wkup
+
+)
+
+(defalias
+
+  w (macro end ret)
+  e ret
+
+  y C-c
+  u C-left
+  i up
+
+  ;;o (multi (macro end ret) @qwe)
+  o C-rght
+  p C-v
+  [ home
+  ] end
+
+  a (dynamic-macro-record 0)
+  s lsft
+  d (layer-toggle delete)
+  f C-S-f
+
+  j left
+  k down
+  l rght
+  ; ret
+  ' rpt
+
+  z (dynamic-macro-play 0)
+  c lctrl
+  v lsft
+  b S-f3
+
+  n f3
+  , C-left
+  . C-rght
+  / C-f
+)
+
+(deflayer vim
+
+  @qwe    1    2    3    4    5    6    7    8    9    0    -    =    bspc
+
+  tab      q   @w   @e   r   t   @y   @u   @i   @o   @p   @[   @]   \
+
+  @qtg       @a   @s   @d   @f   g   h   @j   @k   @l   @;   @'     ret
+
+  lsft         @z   x   @c   @v   @b   @n   m   @,   @.   @/        rsft
+
+  lctl   met   alt            @spc            alt   met   rctl    wkup
+
+)
+
+(deflayermap (delete)
+  u C-bspc ;; del prev word
+  i (macro C-S-k up) ;; del to start of line
+  o C-del ;; to next word
+  j bspc ;; del prev char
+  k C-S-k ;; del to end of line
+  l del ;; del next char
+  x C-x
+  caps @qwe
+  esc @qwe
+)
+
+(deflayer mouse
+
+  @qwe   1    2    3    4    5    6    7    8    9    0    -    =    bspc
+
+  tab      @lu @ma↑ @ru   r    t    y    mlft mrgt mmid p    [    ]    \
+
+  @cap       @ma← @ma↓ @ma→ f    g    @mwl @mwd @mwu @mwr ;    '     ret
+
+  @fms         @ld @cen @rd  M-v  @vim n @qwe ,    .    /        rsft
+
+  lctl   lmet   @alt           @spc            @alt   lmet   rctl    wkup
+
+)
+
+(defalias
+  mwu (mwheel-up 50 240)
+  mwd (mwheel-down 50 240)
+  mwl (mwheel-left 50 120)
+  mwr (mwheel-right 50 120)
+  ma↑ (movemouse-accel-up 10 500 1 10)
+  ma← (movemouse-accel-left 10 500 1 10)
+  ma↓ (movemouse-accel-down 10 500 1 10)
+  ma→ (movemouse-accel-right 10 500 1 10)
+
+  fms (movemouse-speed 10)
+
+  ;;not work in linux yet
+  cen (setmouse 32228 32228)
+  lu (setmouse 0 0)
+  ld (setmouse 0 64456)
+  ru (setmouse 64456 0)
+  rd (setmouse 64456 64456)
+)

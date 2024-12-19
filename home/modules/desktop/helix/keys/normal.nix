@@ -23,11 +23,11 @@
   C-l = "extend_to_line_end";
 
   w = "move_prev_word_start";
-  W = "extend_prev_long_word_start";
+  W = "extend_prev_word_start";
 
   E = "extend_next_word_end";
   b = "move_next_word_start";
-  B = "extend_next_long_word_start";
+  B = "extend_next_word_start";
 
   # goto mode
   g = {

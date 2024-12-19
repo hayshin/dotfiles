@@ -1,7 +1,7 @@
 {
   imports = [
     ./desktop/desktop.nix
-    ./cli/cli.nix
+    ./shell/shell.nix
     ./sys/sys.nix
   ];
 }

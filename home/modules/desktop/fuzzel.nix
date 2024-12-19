@@ -3,8 +3,8 @@
     enable = true;
     settings = {
       main = {
-        terminal = "$TERMINAL -e";
-        font = "JetBrains Mono:size=12";
+        terminal = "kitty -e";
+        # font = "JetBrains Mono:size=12";
         icons-enabled = false;
         fuzzy = true;
       };

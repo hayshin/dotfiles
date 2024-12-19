@@ -1,5 +1,7 @@
 {
   imports = [
+    ./yazi/yazi.nix
+    ./helix/helix.nix
     ./swayosd.nix
     ./imv.nix
     ./xdg.nix

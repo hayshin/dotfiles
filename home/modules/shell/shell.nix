@@ -1,9 +1,11 @@
 {
   imports = [
+    ./thefuck.nix
+    ./zoxide.nix
+    ./zellij.nix
+    ./bat.nix
     ./starship.nix
     ./direnv.nix
-    ./helix/helix.nix
-    ./yazi/yazi.nix
     ./zsh.nix
     ./nushell.nix
     ./kitty.nix
