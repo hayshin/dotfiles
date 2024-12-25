@@ -1,16 +1,10 @@
 { pkgs, ... }:
 {
   imports = [
-    ./kanata/kanata.nix
-    ./audio.nix
-    ./battery.nix
-    ./i18n.nix
-    ./nix.nix
-    ./users/users.nix
+    ./modules
+    ./users
     ../stylix.nix
     ./hardware-configuration.nix
-    ./boot.nix
-    ./greeter.nix
   ];
 
   networking = {
@@ -28,12 +22,6 @@
       home-manager
       hyprland
       git
-      zsh
-      nushell
-      gh
-      powertop
-      zip
-      unzip
     ];
     sessionVariables = import ../variables.nix;
   };
@@ -49,6 +37,10 @@
     };
   };
 
+  # services = {
+  #   cloudflare-warp.enable = true;
+  # };
+
   system.stateVersion = "24.05";
 
   security = {
@@ -60,20 +52,9 @@
     # polkit.enable = true;
   };
 
-  services = {
-    # xserver = {
-    #   enable = true;
-    #   xkb.layout = "us";
-    # displayManager.gdm = {
-    #   enable = true;
-    #   wayland = true;
-    # };
-    # };
-  };
-
-  # fonts.packages = with pkgs; [
-  #   font-awesome
-  #   jetbrains-mono
-  # ];
+  fonts.packages = with pkgs; [
+    font-awesome
+    jetbrains-mono
+  ];
 
 }

@@ -1,8 +1,7 @@
-{ pkgs, config, ... }:
 {
   imports = [
     ../stylix.nix
-    ./modules/modules.nix
+    ./modules
   ];
 
   home = {
@@ -11,7 +10,7 @@
     stateVersion = "24.05";
     preferXdgDirectories = true;
     sessionVariables = import ../variables.nix;
-    packages = import ./packages.nix { inherit pkgs config; };
+    shellAliases = import ./modules/shell/shell_aliases.nix{nix_dir = "$NIX";};
     # activation.restartHyprpaper = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     #   if systemctl --user is-active --quiet hyprpaper.service; then
     #     systemctl --user restart hyprpaper.service
@@ -19,7 +18,6 @@
     #     systemctl --user start hyprpaper.service
     #   fi
     # '';
-
   };
-  nixpkgs.config.allowUnfree = true;
+    nixpkgs.config.allowUnfree = true;
 }

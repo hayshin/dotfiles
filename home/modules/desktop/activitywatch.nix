@@ -1,6 +1,0 @@
-{
-  services.activitywatch = {
-    enable = true;
-
-  };
-}
