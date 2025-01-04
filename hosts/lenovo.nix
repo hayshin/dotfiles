@@ -1,9 +1,12 @@
 { pkgs, ... }:
 {
   imports = [
-    ./modules
+    ./modules/kanata
+    ./modules/battery/nvidia_gpu_off.nix
+    ./modules/boot.nix
+    ./modules/i18n.nix
+    ./modules/nix.nix
     ./users/lenovo.nix
-    ../stylix.nix
     ./hardware/lenovo.nix
   ];
 
