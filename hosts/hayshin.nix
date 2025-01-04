@@ -1,10 +1,12 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   imports = [
     ./modules
     ./users
     ../stylix.nix
     ./hardware/hayshin.nix
+    ./minecraft.nix
+    { inherit inputs; }
   ];
 
   networking = {

@@ -1,7 +1,6 @@
 {
-
   NIXOS_OZONE_WL = "1";
-  NIX = "/home/hayshin/nix";
+  NIX = "$HOME/nix";
   TERMINAL = "kitty";
   FILE_MANAGER = "yazi";
   EDITOR = "hx";
