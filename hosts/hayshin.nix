@@ -6,7 +6,6 @@
     ../stylix.nix
     ./hardware/hayshin.nix
     ./minecraft.nix
-    { inherit inputs; }
   ];
 
   networking = {

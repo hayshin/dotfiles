@@ -8,6 +8,7 @@
     ./modules/nix.nix
     ./users/lenovo.nix
     ./hardware/lenovo.nix
+    ./minecraft.nix
   ];
 
   networking = {

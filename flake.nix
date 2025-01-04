@@ -20,7 +20,7 @@
       stylix,
       home-manager,
       ...
-    }:
+    }@inputs:
     let
       system = "x86_64-linux";
     in
@@ -29,6 +29,9 @@
       nixosConfigurations = {
         hayshin = nixpkgs.lib.nixosSystem {
           inherit system;
+          specialArgs = {
+            inherit inputs;
+          };
           modules = [
             ./hosts/hayshin.nix
             stylix.nixosModules.stylix
@@ -36,6 +39,9 @@
         };
         lenovo = nixpkgs.lib.nixosSystem {
           inherit system;
+          specialArgs = {
+            inherit inputs;
+          };
           modules = [
             ./hosts/lenovo.nix
           ];

@@ -11,7 +11,7 @@
       serverProperties = {
         online-mode = false;
       };
-      package = pkgs.minecraftServers.vanilla-1_18_2;
+      package = pkgs.fabricServers.fabric-1_21_4;
       jvmOpts = "-Xms 4096 -Xmx 6144";
     };
   };
