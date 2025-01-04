@@ -3,6 +3,7 @@
   imports = [
     ./direnv.nix
     ./git.nix # version control system
+    ./gh.nix # github
     ./editorconfig.nix
   ];
   home.packages = with pkgs; [

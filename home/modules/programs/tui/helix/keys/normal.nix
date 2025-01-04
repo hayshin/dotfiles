@@ -29,6 +29,10 @@
   b = "move_next_word_start";
   B = "extend_next_word_start";
 
+  ";" = [
+    "open_below"
+    "normal_mode"
+  ];
   # goto mode
   g = {
     j = "goto_line_start";

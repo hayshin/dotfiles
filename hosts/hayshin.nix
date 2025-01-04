@@ -4,7 +4,7 @@
     ./modules
     ./users
     ../stylix.nix
-    ./hardware-configuration.nix
+    ./hardware/hayshin.nix
   ];
 
   networking = {
@@ -37,10 +37,6 @@
     };
   };
 
-  # services = {
-  #   cloudflare-warp.enable = true;
-  # };
-
   system.stateVersion = "24.05";
 
   security = {
@@ -56,5 +52,4 @@
     font-awesome
     jetbrains-mono
   ];
-
 }

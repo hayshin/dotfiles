@@ -1,0 +1,95 @@
+(defsrc
+
+  esc    1    2    3    4    5    6    7    8    9    0    -    =    bspc
+
+  tab      q    w    e    r    t    y    u    i    o    p    [    ]    \
+
+  caps       a    s    d    f    g    h    j    k    l    ;    '     ret
+
+  lsft         z    x    c    v    b    n    m    ,    .    /        rsft
+
+  lctl   lmet   lalt            spc            ralt   comp   rctl    wkup
+
+)
+
+(defvar
+  tap-timeout 200
+  hold-timeout 200
+
+  tt $tap-timeout
+  ht $hold-timeout
+)
+
+(defalias
+  qwe (layer-switch qwerty)
+  vim (layer-switch vim)
+  cap (tap-hold $tt $ht (layer-switch vim) (layer-toggle vim))
+  btg (tap-hold-release $tt $ht b (layer-toggle vim))
+  spc (tap-hold-release $tt $ht spc (layer-toggle qwerty))
+  qtg (tap-hold-release $tt $ht @qwe (layer-toggle qwerty))
+)
+
+(deflayer qwerty
+
+  esc    1    2    3    4    5    6    7    8    9    0    -    =    bspc
+
+  tab      q    w    e    r    t    y    u    i    o    p    [    ]    \
+
+  @cap       a    s    d    f    g    h    j    k    l    ;    '     ret
+
+  lsft         z    x    c    v    b    n    m    ,    .     /       rsft
+
+  lctl   lmet   lalt             spc            ralt   rmet   rctl    wkup
+
+)
+
+(defalias
+  w C-left
+  e C-rght
+
+  y C-c
+  u C-z
+  i up
+
+  o (multi (macro end ret) @qwe)
+  p C-v
+  [ home
+  ] end
+
+  ;; a (dynamic-macro-record 0)
+  a @qwe
+  s lsft
+  d del
+  f C-S-f
+
+  h @qwe
+  j left
+  k down
+  l rght
+  ; ret
+
+  z (dynamic-macro-play 0)
+  c lctrl
+  v lsft
+  b S-f3
+
+  n f3
+  , C-left
+  . C-rght
+  / C-f
+)
+
+(deflayer vim
+
+  @qwe    1    2    3    4    5    6    7    8    9    0    -    =    bspc
+
+  tab      q   @w   @e   r   t   @y   @u   @i   @o   @p   @[   @]   \
+
+  @qtg       @a   @s   @d   @f   g   @h   @j   @k   @l   @;   '     ret
+
+  lsft         @z   x   @c   @v   @b   @n   m   @,   @.   @/        rsft
+
+  lctl   met   alt            @spc            alt   met   rctl    wkup
+
+)
+

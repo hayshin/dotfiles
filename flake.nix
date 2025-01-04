@@ -3,6 +3,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     stylix = {
+      # style applications
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
@@ -24,21 +25,36 @@
     in
     {
       # "hayshin" - system hostname
-      nixosConfigurations.hayshin = nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = [
-          ./nixos/configuration.nix
-          stylix.nixosModules.stylix
-        ];
-
+      nixosConfigurations = {
+        hayshin = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./hosts/hayshin.nix
+            stylix.nixosModules.stylix
+          ];
+        };
+        lenovo = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./hosts/lenovo.nix
+          ];
+        };
       };
       # "hayshin" - username
-      homeConfigurations.hayshin = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${system};
-        modules = [
-          ./home/home.nix
-          stylix.homeManagerModules.stylix
-        ];
+      homeConfigurations = {
+        hayshin = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.${system};
+          modules = [
+            ./home/hayshin.nix
+            stylix.homeManagerModules.stylix
+          ];
+        };
+        lenovo = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.${system};
+          modules = [
+            ./home/lenovo.nix
+          ];
+        };
       };
     };
 }

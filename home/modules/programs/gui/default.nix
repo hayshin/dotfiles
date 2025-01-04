@@ -1,8 +1,8 @@
-
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./browser
+    ./zathura.nix # pdf viewer
     ./imv.nix # image viewer
     ./mpv.nix # video viewer
     ./kitty.nix # terminal
@@ -13,5 +13,6 @@
     obsidian # notes
     shotcut # video editor
     webcord # discord wrapper with wayland support
+    discord
   ];
 }

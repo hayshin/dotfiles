@@ -1,9 +1,9 @@
-# { pkgs, ... }:
+{ pkgs, ... }:
 {
   programs.helix = {
     enable = true;
     defaultEditor = true;
-    # extraPackages = import ./packages.nix { pkgs = pkgs; };
+    extraPackages = import ./packages.nix { pkgs = pkgs; };
     languages = import ./languages.nix;
 
     settings = {
