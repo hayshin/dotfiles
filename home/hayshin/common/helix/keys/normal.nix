@@ -25,7 +25,7 @@
   H = "insert_at_line_start";
 
   a = [
-    "insert_mode"
+    "append_mode"
     "collapse_selection"
   ];
 

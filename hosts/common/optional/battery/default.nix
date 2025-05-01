@@ -1,9 +1,9 @@
 {
-  imports = [ ./nvidia_gpu_off.nix ];
+  # imports = [ ./nvidia_gpu_off.nix ];
   services = {
-    # asusd.enable = true;
+    asusd.enable = true;
     thermald.enable = true;
-    # upower.enable = true;
+    upower.enable = true;
     auto-cpufreq = {
       enable = true;
       settings = {
