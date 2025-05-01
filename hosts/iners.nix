@@ -20,7 +20,7 @@ in
       "ydotool.nix"
       "greeter.nix"
       "jupyter.nix"
-      "asus.nix"
+      "ollama.nix"
     ];
 
   networking = {
