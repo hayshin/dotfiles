@@ -30,6 +30,7 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      rootPath = ./.;
     in
     {
       # "hayshin" - system hostname
@@ -38,6 +39,7 @@
           inherit system;
           specialArgs = {
             inherit inputs;
+            inherit rootPath;
           };
           modules = [
             ./hosts/iners.nix
@@ -65,7 +67,10 @@
             ./home/hayshin/iners.nix
             stylix.homeManagerModules.stylix
           ];
-          extraSpecialArgs = { inherit inputs; };
+          extraSpecialArgs = {
+            inherit inputs;
+            inherit rootPath;
+          };
         };
         server = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;

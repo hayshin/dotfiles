@@ -18,8 +18,16 @@
   C-j = "extend_to_line_start";
   A-j = "jump_view_left";
 
-  h = "insert_mode";
+  h = [
+    "insert_mode"
+    "collapse_selection"
+  ];
   H = "insert_at_line_start";
+
+  a = [
+    "insert_mode"
+    "collapse_selection"
+  ];
 
   l = "move_char_right";
   L = "extend_char_right";

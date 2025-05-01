@@ -12,7 +12,8 @@
     # cargo
     # rust-analyzer
     # rustfmt
-    # gcc
+    gcc
+    clang-tools
     # jetbrains.idea-ultimate
     # jetbrains.pycharm-professional
     # linuxKernel.packages.linux_6_11.perf

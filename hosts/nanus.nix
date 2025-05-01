@@ -15,7 +15,7 @@ in
   };
 
   environment = {
-    sessionVariables = import ../variables.nix;
+    # sessionVariables = import ../variables.nix;
   };
 
   system.stateVersion = "24.11";

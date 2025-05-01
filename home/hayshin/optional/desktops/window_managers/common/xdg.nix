@@ -25,6 +25,24 @@ in
       templates = "${home}/templates";
       publicShare = "${home}/public";
     };
+    desktopEntries = {
+      zen = {
+        name = "Zen Browser";
+        genericName = "Web Browser";
+        exec = "zen";
+        terminal = false;
+        categories = [
+          "Application"
+          "Network"
+          "WebBrowser"
+        ];
+        mimeType = [
+          "text/html"
+          "text/xml"
+          "application/pdf"
+        ];
+      };
+    };
   };
 
 }

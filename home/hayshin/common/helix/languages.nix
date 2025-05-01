@@ -7,21 +7,28 @@
         command = "nixfmt";
       };
     }
-    # {
-    #   name = "python";
-    #   auto-format = true;
-    #   formatter = {
-    #     command = "ruff";
-    #   };
-    # }
+    {
+      name = "python";
+      auto-format = true;
+      formatter = {
+        command = "ruff";
+      };
+      language-servers = [ "basedpyright" ];
+    }
   ];
   language-server = {
-    ruff-lsp = {
-      name = "ruff-lsp";
-      command = "ruff-lsp";
+    # ruff-lsp = {
+    #   name = "ruff-lsp";
+    #   command = "ruff-lsp";
+    basedpyright = {
+      command = "uv";
+      args = [
+        "run"
+        "basedpyright-langserver"
+        "--stdio"
+      ];
     };
     clangd = {
-      # name = "ruff-lsp";
       command = "clangd";
       args = [
         "--query-driver=clang++"

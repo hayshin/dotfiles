@@ -4,9 +4,12 @@ with pkgs;
   nil
   nixfmt-rfc-style
   marksman
-  ruff
-  ruff-lsp
-  pyright
+
+  # ruff
+  # ruff-lsp
+  # pyright
+
+  clang-tools
   # clang-tools
   # rust-analyzer
   # rustfmt

@@ -1,5 +1,6 @@
 {
   imports = [
+    ./devenv.nix
     ./thefuck.nix # fuck if mistype command
     ./zoxide.nix # better cd
     ./bat.nix # better cat

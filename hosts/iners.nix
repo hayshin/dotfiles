@@ -9,6 +9,8 @@ in
       ./common/users
     ]
     ++ map (concat ./common/optional) [
+      "stylix.nix"
+      "docker.nix"
       "battery"
       "kanata"
       "hyprland.nix"

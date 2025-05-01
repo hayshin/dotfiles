@@ -3,6 +3,7 @@
   imports = [
     ../common
     ../wayland
+    ../optional
     ./idle.nix
     ./paper.nix
   ];
