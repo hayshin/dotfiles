@@ -7,6 +7,7 @@ in
     ./common/core
     ./common/users
     ./common/optional/ssh.nix
+    ./common/optional/docker.nix
   ];
 
   networking = {

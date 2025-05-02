@@ -8,9 +8,7 @@ in
     ./shell
     ./yazi
     ./helix
-    ./fastfetch.nix
     ./btop.nix
-    ./fzf.nix
     ./helix
   ];
 
