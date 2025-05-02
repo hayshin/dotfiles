@@ -56,7 +56,7 @@
 
       # "hayshin" - username
       homeConfigurations = {
-        hayshin = home-manager.lib.homeManagerConfiguration {
+        "hayshin@iners" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
             ./home/hayshin/iners.nix
@@ -67,7 +67,18 @@
             inherit rootPath;
           };
         };
-        server = home-manager.lib.homeManagerConfiguration {
+        "hayshin@nanus" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [
+            ./home/hayshin/nanus.nix
+            stylix.homeManagerModules.stylix
+          ];
+          extraSpecialArgs = {
+            inherit inputs;
+            inherit rootPath;
+          };
+        };
+        "server" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
             ./home/server
