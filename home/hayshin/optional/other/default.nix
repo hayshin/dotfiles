@@ -5,6 +5,5 @@
     ./obsidian.nix
     ./obs.nix
     ./ghostty.nix
-    ./wezterm.nix
   ];
 }
