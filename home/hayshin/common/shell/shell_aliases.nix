@@ -1,6 +1,6 @@
 { nix_dir }:
 {
-  git_nix = "cd ${nix_dir} ; "
+  gc = "git commit -m ";
   rebuild = "sudo nixos-rebuild switch --flake ${nix_dir}";
   update = "nix flake update --flake ${nix_dir}";
   upgrade = "sudo nixos-rebuild switch --upgrade --flake ${nix_dir}";

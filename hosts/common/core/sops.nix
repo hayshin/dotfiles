@@ -1,7 +1,8 @@
 # to keep secrets privately to others
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [ inputs.sops-nix.nixosModules.sops ];
+  environment.systemPackages = [ pkgs.sops ];
   sops = {
     defaultSopsFile = ../../secrets.yaml;
     defaultSopsFormat = "yaml";

@@ -4,6 +4,7 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
+    shellAliases = import ./shell_aliases.nix { nix_dir = "$NIX"; };
 
     history.size = 10000;
     history.path = "~/zsh/history";
