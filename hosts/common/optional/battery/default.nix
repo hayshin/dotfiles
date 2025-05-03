@@ -1,7 +1,6 @@
 {
   # imports = [ ./nvidia_gpu_off.nix ];
   services = {
-    asusd.enable = true;
     thermald.enable = true;
     upower.enable = true;
     auto-cpufreq = {
@@ -13,7 +12,7 @@
         };
         charger = {
           governor = "performance";
-          turbo = "never";
+          turbo = "auto";
         };
       };
     };
@@ -36,12 +35,13 @@
         PLATFORM_PROFILE_ON_BAT = "low-power";
 
         START_CHARGE_THRESH_BAT0 = 60; # 60 and below it starts to charge
-        STOP_CHARGE_THRESH_BAT0 = 90; # 90 and above it stops charging
+        STOP_CHARGE_THRESH_BAT0 = 80; # 90 and above it stops charging
       };
     };
   };
 
   powerManagement = {
+    enable = true;
     powertop.enable = true;
   };
 }

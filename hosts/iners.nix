@@ -9,6 +9,7 @@ in
       ./common/users
     ]
     ++ map (concat ./common/optional) [
+      "asus.nix"
       "stylix.nix"
       "docker.nix"
       "battery"

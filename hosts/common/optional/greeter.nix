@@ -2,10 +2,8 @@
 {
   services.greetd = {
     enable = true;
+    vt = 1;
     settings = {
-      terminal = {
-        vt = 1;
-      };
       default_session = {
         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --remember-session";
         user = "greeter";
@@ -16,4 +14,5 @@
       # };
     };
   };
+  environment.systemPackages = [ pkgs.greetd.tuigreet ];
 }
