@@ -3,7 +3,8 @@
 {
   programs.direnv = {
     enable = true;
-    enableNushellIntegration = true;
+    # enableNushellIntegration = true;
+    # enableZshIntegration = true;
     # silent = true;
 
     # nix-direnv.enable = true;

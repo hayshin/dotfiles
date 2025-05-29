@@ -7,7 +7,6 @@
     ./starship.nix # shell prompt
     ./fd.nix # find files
     ./fastfetch.nix # find files
-
     ./fzf.nix # find files
   ];
 }

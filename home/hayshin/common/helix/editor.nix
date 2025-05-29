@@ -9,6 +9,8 @@
   };
   lsp = {
     display-messages = true;
+    auto-signature-help = false;
+    display-signature-help-docs = true;
     display-inlay-hints = true;
     snippets = true;
   };

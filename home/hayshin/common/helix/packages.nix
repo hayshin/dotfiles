@@ -1,23 +1,31 @@
 { pkgs, ... }:
 with pkgs;
 [
-  nil
+  nixd
   nixfmt-rfc-style
-  marksman
+  bash-language-server
 
+  clang-tools
+  rust-analyzer
+
+  buf
+  vscode-langservers-extracted
+  typescript-language-server
+  svelte-language-server
+  nodePackages.prettier
+  emmet-ls
+
+  taplo
+  marksman
+  yaml-language-server
+
+  # docker-langserver
+  docker-compose-language-service
   # ruff
   # ruff-lsp
   # pyright
 
-  clang-tools
   # clang-tools
-  # rust-analyzer
   # rustfmt
   # cargo
-  # nodePackages.svelte-language-server
-  # nodePackages.typescript-language-server
-  # vscode-langservers-extracted
-  # nodePackages.prettier
-  # nodePackages.typescript
-  # emmet-ls
 ]

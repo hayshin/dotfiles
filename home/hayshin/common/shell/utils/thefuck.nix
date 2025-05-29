@@ -2,7 +2,7 @@
 {
   programs.thefuck = {
     enable = true;
-    enableNushellIntegration = true;
-    enableZshIntegration = true;
+    # enableNushellIntegration = true;
+    # enableZshIntegration = true;
   };
 }

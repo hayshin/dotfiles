@@ -7,11 +7,10 @@
     ./lazysql.nix
     ./zellij.nix
     ./vscode.nix
+    ./rust.nix
+    ./frontend.nix
   ];
   home.packages = with pkgs; [
-    # cargo
-    # rust-analyzer
-    # rustfmt
     gcc
     clang-tools
     # jetbrains.idea-ultimate
@@ -23,11 +22,6 @@
     # nodejs
     # pnpm
     # emmet-ls
-    # nodePackages.prettier
-    # nodePackages.svelte-language-server
-    # nodePackages.typescript
-    # nodePackages.typescript-language-server
     # vscode
-    # vscode-langservers-extracted
   ];
 }
