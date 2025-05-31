@@ -1,4 +1,5 @@
 {
+  NIXPKGS_ALLOW_UNFREE = 1;
   NIXOS_OZONE_WL = "1";
   NIX = "$HOME/nix";
   TERMINAL = "kitty";

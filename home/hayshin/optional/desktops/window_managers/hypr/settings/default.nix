@@ -8,7 +8,7 @@ in
   "$float_terminal" =
     "[float;pin;move onscreen cursor 50% 60%;opacity 0.8 override 0.5 override;rounding 0] $TERMINAL";
 
-  general = import ./general.nix;
+  general = import ./general.nix { inherit config; };
   decoration = import ./decoration.nix;
   animations = import ./animations.nix;
   input = import ./input.nix;

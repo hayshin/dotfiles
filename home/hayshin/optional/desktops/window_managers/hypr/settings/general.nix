@@ -1,7 +1,9 @@
+{ config, ... }:
 {
-  gaps_in = 5;
-  gaps_out = 1;
-  border_size = 0;
+  gaps_in = 0;
+  gaps_out = 0;
+  border_size = 2;
+  # col.active_border = "rgb(${config.lib.stylix.colors.base05})";
   layout = "dwindle";
   # cursor_inactive_timeout = 5;
   resize_on_border = true;

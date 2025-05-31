@@ -1,5 +1,5 @@
 {
-  rounding = 24;
+  rounding = 0;
 
   # 0.90 0.80 with blur
   # active_opacity = 1;

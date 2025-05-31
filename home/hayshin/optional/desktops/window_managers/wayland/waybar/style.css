@@ -1,0 +1,72 @@
+* {
+  min-height: 0;
+  font-family: JetBrains Mono, FontAwesome;
+  font-size: 14px;
+  font-weight: 900;
+  outline: 2px solid @base05;
+  outline-offset: -2px;
+}
+
+window#waybar {
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  background-color: @base00;
+}
+
+window#waybar.hidden {
+  opacity: 0;
+  margin-top: -50px;
+}
+
+#workspaces {
+  background: @base00;
+  padding-left: 10px;
+  padding-right: 15px;
+}
+
+#workspaces button {
+  padding: 2px 2px;
+  margin: 3px 3px;
+  border: 1px;
+  border-radius: 0px;
+  transition: all 0.2s ease-in-out;
+}
+
+#workspaces button.active {
+  color: @base00;
+  background: @base05;
+  min-width: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+#workspaces button.urgent {
+  background: #ff0000;
+}
+
+.module {
+  background: @base00;
+  color: @base05;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+tooltip {
+  background: @base00;
+  color: @base05;
+}
+
+#mpris {
+  font-weight: 600;
+  font-size: 14px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#bluetooth {
+  font-size: 18px;
+}
+
+#tray {
+  margin-left: 10px;
+  margin-right: 10px;
+}

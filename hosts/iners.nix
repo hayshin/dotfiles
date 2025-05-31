@@ -9,6 +9,8 @@ in
       ./common/users
     ]
     ++ map (concat ./common/optional) [
+      # "kdeconnect.nix"
+      "bluetooth.nix"
       "asus.nix"
       "stylix.nix"
       "docker.nix"

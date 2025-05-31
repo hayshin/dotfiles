@@ -1,20 +1,15 @@
-{ config, ... }:
-with config.lib.stylix.colors.withHashtag;
+{ lib, ... }:
 let
-  style = import ./style.nix {
-    bg-color = base00;
-    fg-color = base05;
-  };
+  styleStr = builtins.readFile ./style.css;
 in
 {
-
   programs.waybar = {
     enable = true;
     settings = import ./settings.nix;
     systemd = {
       enable = true;
     };
-    style = style;
+    style = lib.mkAfter styleStr;
   };
-  stylix.targets.waybar.enable = false;
+  # stylix.targets.waybar.enable = false;
 }
