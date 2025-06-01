@@ -3,6 +3,7 @@
   imports = [
     ./git.nix # version control system
     ./gh.nix # github
+    ./cursor.nix
     ./editorconfig.nix
     ./lazysql.nix
     ./zellij.nix
