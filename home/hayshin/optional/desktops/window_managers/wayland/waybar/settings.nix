@@ -1,8 +1,8 @@
 {
   mainBar = {
     layer = "top";
-    position = "bottom";
-    start_hidden = true;
+    position = "top";
+    start_hidden = false;
     exclusive = true;
     spacing = 0;
     reload_style_on_change = false;
@@ -14,8 +14,8 @@
     ];
     modules-right = [
       "mpris"
-      "network"
       "bluetooth"
+      "network"
       "pulseaudio"
       "backlight"
       "battery"

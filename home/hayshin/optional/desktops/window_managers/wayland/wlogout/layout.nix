@@ -1,7 +1,7 @@
 [
   {
     label = "suspend";
-    action = "sleep 0.1 ; systemctl suspend ; lock";
+    action = "suspend";
     text = "Suspend";
     keybind = "u";
   }

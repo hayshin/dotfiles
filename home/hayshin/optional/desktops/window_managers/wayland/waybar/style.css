@@ -1,69 +1,68 @@
+@define-color bg @base00;
+@define-color fg @base05;
+
 * {
-  min-height: 0;
+  min-height: 16px;
   font-family: JetBrains Mono, FontAwesome;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 900;
-  outline: 2px solid @base05;
-  outline-offset: -2px;
+  /* outline: 2px solid @fg; */
+  /* outline-offset: -2px; */
 }
 
 window#waybar {
   transition: all 0.5s ease-in-out;
   opacity: 1;
-  background-color: @base00;
+  background-color: @bg;
 }
 
-window#waybar.hidden {
-  opacity: 0;
-  margin-top: -50px;
-}
+/* window#waybar.hidden { */
+/* opacity: 0; */
+/* margin-top: -50px; */
+/* } */
 
 #workspaces {
-  background: @base00;
+  background: @bg;
   padding-left: 10px;
   padding-right: 15px;
 }
 
 #workspaces button {
-  padding: 2px 2px;
-  margin: 3px 3px;
-  border: 1px;
+  padding: 0px 2px;
+  margin: 0px 2px;
+  /* border: 1px; */
   border-radius: 0px;
   transition: all 0.2s ease-in-out;
 }
 
 #workspaces button.active {
-  color: @base00;
-  background: @base05;
-  min-width: 40px;
+  color: @bg;
+  background: @fg;
+  min-width: 30px;
   transition: all 0.2s ease-in-out;
 }
 
 #workspaces button.urgent {
-  background: #ff0000;
+  background: @base08;
 }
 
 .module {
-  background: @base00;
-  color: @base05;
+  background: @bg;
+  color: @fg;
   padding-right: 10px;
   padding-left: 10px;
 }
 
 tooltip {
-  background: @base00;
-  color: @base05;
+  background: @bg;
+  color: @fg;
 }
 
 #mpris {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   margin-left: 10px;
   margin-right: 10px;
-}
-
-#bluetooth {
-  font-size: 18px;
 }
 
 #tray {

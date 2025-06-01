@@ -7,8 +7,12 @@
       };
       listener = [
         {
-          timeout = 600;
+          timeout = 300;
           on-timeout = "lock";
+        }
+        {
+          timeout = 600;
+          on-timeout = "suspend";
         }
       ];
     };

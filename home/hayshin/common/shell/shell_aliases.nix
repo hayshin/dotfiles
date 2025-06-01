@@ -6,6 +6,7 @@
   upgrade = "sudo nixos-rebuild switch --upgrade --flake ${nix_dir}";
   home-rebuild = "home-manager -b backup switch --flake ${nix_dir}";
   poweroff = "systemctl poweroff";
+  suspend = "bash -c 'systemctl suspend; lock'";
   reboot = "systemctl reboot";
   cd = "z";
   cat = "bat";

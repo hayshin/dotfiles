@@ -4,9 +4,9 @@ let
 in
 {
 
-  bindr = [
-    "$mod,Super_L, exec, pkill -SIGUSR1 waybar"
-  ];
+  # bindr = [
+  #   "$mod,Super_L, exec, pkill -SIGUSR1 waybar"
+  # ];
 
   bindl = [ " , switch:Lid Switch, exec, lock" ];
 

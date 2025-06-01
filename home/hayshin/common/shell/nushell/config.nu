@@ -10,3 +10,5 @@ $env.config.show_banner = false
 # alias cat = bat;
 
 def home_rebuild [] {cd $env.NIX ; git add . ; home-manager -b backup switch --flake $env.NIX}
+
+
