@@ -10,6 +10,7 @@
     ./vscode.nix
     ./rust.nix
     ./frontend.nix
+    ./warp-terminal.nix
   ];
   home.packages = with pkgs; [
     gcc
