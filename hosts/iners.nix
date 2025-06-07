@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 let
   concat = dir: name: dir + "/${name}";
 in
@@ -29,10 +30,13 @@ in
   networking = {
     hostName = "iners";
     networkmanager.enable = true;
+    firewall.enable = false;
+
   };
 
   environment = {
     sessionVariables = import ../variables.nix;
+    systemPackages = [ pkgs.cloudflared ];
   };
 
   programs.hyprland = {

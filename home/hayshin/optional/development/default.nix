@@ -11,6 +11,8 @@
     ./rust.nix
     ./frontend.nix
     ./warp-terminal.nix
+    ./database.nix
+    ./python.nix
   ];
   home.packages = with pkgs; [
     gcc

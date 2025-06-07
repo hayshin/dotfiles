@@ -43,6 +43,18 @@
             nixos-hardware.nixosModules.asus-fx506hm
           ];
         };
+        matte = nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = {
+            inherit inputs;
+            inherit rootPath;
+          };
+          modules = [
+            ./hosts/matte.nix
+            stylix.nixosModules.stylix
+            sops-nix.nixosModules.sops
+          ];
+        };
         nanus = nixpkgs.lib.nixosSystem {
           inherit system;
           specialArgs = {
@@ -61,6 +73,17 @@
           inherit pkgs;
           modules = [
             ./home/hayshin/iners.nix
+            stylix.homeManagerModules.stylix
+          ];
+          extraSpecialArgs = {
+            inherit inputs;
+            inherit rootPath;
+          };
+        };
+        "hayshin@matte" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [
+            ./home/hayshin/matte.nix
             stylix.homeManagerModules.stylix
           ];
           extraSpecialArgs = {
