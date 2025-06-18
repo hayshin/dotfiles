@@ -20,14 +20,14 @@
     # ruff-lsp = {
     #   name = "ruff-lsp";
     #   command = "ruff-lsp";
-    basedpyright = {
-      command = "uv";
-      args = [
-        "run"
-        "basedpyright-langserver"
-        "--stdio"
-      ];
-    };
+    # basedpyright = {
+    #   command = "uv";
+    #   args = [
+    #     "run"
+    #     "basedpyright-langserver"
+    #     "--stdio"
+    #   ];
+    # };
     clangd = {
       command = "clangd";
       args = [

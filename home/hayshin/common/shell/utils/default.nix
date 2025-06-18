@@ -1,5 +1,6 @@
 {
   imports = [
+    ./ripgrep.nix
     ./devenv.nix
     ./thefuck.nix # fuck if mistype command
     ./zoxide.nix # better cd
