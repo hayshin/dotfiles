@@ -11,8 +11,9 @@ in
     ]
     ++ map (concat ./common/optional) [
       # "kdeconnect.nix"
+      "archive.nix"
+      "steam.nix"
       "bluetooth.nix"
-      "asus.nix"
       "stylix.nix"
       "docker.nix"
       "battery"

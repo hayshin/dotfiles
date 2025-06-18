@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
+    ./google-cloud.nix
     ./git.nix # version control system
     ./gh.nix # github
     ./cursor.nix
@@ -13,6 +14,7 @@
     ./warp-terminal.nix
     ./database.nix
     ./python.nix
+    ./android.nix
   ];
   home.packages = with pkgs; [
     gcc

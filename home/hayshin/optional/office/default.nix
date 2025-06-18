@@ -1,5 +1,6 @@
 {
   imports = [
+    ./zoom.nix
     ./libreoffice.nix
     ./zathura.nix
     ./pandoc.nix

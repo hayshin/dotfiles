@@ -7,7 +7,6 @@
     # enableZshIntegration = true;
     # silent = true;
 
-    # nix-direnv.enable = true;
     config = {
       global = {
         warn_timeout = "1m";
@@ -17,6 +16,7 @@
         prefix = [ "/home/hayshin/dev" ];
       };
     };
+    nix-direnv.enable = true;
   };
   home.packages = [ pkgs.devenv ];
 }
