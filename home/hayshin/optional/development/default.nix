@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
-    ./google-cloud.nix
+    ./cloud.nix
     ./git.nix # version control system
     ./gh.nix # github
     ./cursor.nix

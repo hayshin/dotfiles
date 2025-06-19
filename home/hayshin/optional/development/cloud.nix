@@ -11,5 +11,6 @@ in
   home.packages = [
     gdk
     pkgs.firebase-tools
+    pkgs.supabase-cli
   ];
 }
