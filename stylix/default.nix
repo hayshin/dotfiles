@@ -23,6 +23,12 @@ in
     };
 
     fonts = {
+      sizes = {
+        applications = 14;
+        popups = 12;
+        desktop = 10;
+        terminal = 12;
+      };
       monospace = {
         package = pkgs.nerd-fonts.jetbrains-mono;
         name = "JetBrainsMono Nerd Font Mono";

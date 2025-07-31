@@ -14,6 +14,12 @@ in
   input = import ./input.nix;
   device = import ./device.nix;
   inherit binds;
+  windowrule = [
+    "float, title:^(Picture in picture)$"
+    "pin, title:^(Picture in picture)$"
+    "float, title:^(Picture-in-Picture)$"
+    "pin, title:^(Picture-in-Picture)$"
+  ];
 
   exec-once = [
     "libinput-gestures"

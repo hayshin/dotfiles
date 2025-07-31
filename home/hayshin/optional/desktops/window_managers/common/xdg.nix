@@ -1,4 +1,4 @@
-{ config, ... }:
+{ pkgs, config, ... }:
 let
   home = config.home.homeDirectory;
 in
@@ -14,6 +14,9 @@ in
         "application/pdf" = "zen.desktop";
         "x-scheme-handler/http" = "zen.desktop";
         "x-scheme-handler/https" = "zen.desktop";
+        "image/jpeg" = "imv.desktop";
+        # "image/jpeg" = "imv.desktop";
+        "image/png" = "imv.desktop";
       };
     };
     userDirs = {
@@ -43,6 +46,14 @@ in
           "text/xml"
           "application/pdf"
         ];
+      };
+    };
+    portal = {
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-termfilechooser
+      ];
+      config = {
+        common."org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
       };
     };
   };

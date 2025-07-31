@@ -43,6 +43,7 @@ in
 
       "$mod SHIFT, P, exec, hyprpicker -a"
       "$mod, P, exec, hyprshot -m region -o ${screenshotsDir}"
+      "$mod, O, exec, pin, toggle"
 
       "$mod, backslash, exec, ${swayosd} --output-volume mute-toggle"
 

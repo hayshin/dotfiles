@@ -1,6 +1,6 @@
 # type fuck if mistyped
 {
-  programs.thefuck = {
+  programs.pay-respects = {
     enable = true;
     # enableNushellIntegration = true;
     # enableZshIntegration = true;

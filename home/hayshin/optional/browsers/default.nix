@@ -1,8 +1,9 @@
 {
   imports = [
+    ./microsoft-edge.nix
     ./chrome.nix
-    ./firefox.nix # browser
-    ./qutebrowser.nix # minimal browser with vim keys
+    ./firefox.nix
+    # ./qutebrowser.nix # minimal browser with vim keys
     ./zen-browser.nix # better firefox
   ];
 }

@@ -5,5 +5,6 @@
     ./obsidian.nix
     ./obs.nix
     ./ghostty.nix
+    ./telegram.nix
   ];
 }

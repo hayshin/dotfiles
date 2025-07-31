@@ -3,30 +3,28 @@ let
   concat = dir: name: dir + "/${name}";
 in
 {
-  imports =
-    [
-      ./hardware/matte.nix
-      ./common/core
-      ./common/users
-    ]
-    ++ map (concat ./common/optional) [
-      # "kdeconnect.nix"
-      "archive.nix"
-      "steam.nix"
-      "bluetooth.nix"
-      "stylix.nix"
-      "docker.nix"
-      "battery"
-      "kanata"
-      "hyprland.nix"
-      "audio.nix"
-      "security.nix"
-      "nix-ld.nix"
-      "ydotool.nix"
-      "greeter.nix"
-      "jupyter.nix"
-      "ollama.nix"
-    ];
+  imports = [
+    ./hardware/matte.nix
+    ./common/core
+    ./common/users
+  ]
+  ++ map (concat ./common/optional) [
+    "archive.nix"
+    "steam.nix"
+    "bluetooth.nix"
+    "stylix.nix"
+    "docker.nix"
+    "battery"
+    "kanata"
+    "hyprland.nix"
+    "audio.nix"
+    "security.nix"
+    "nix-ld.nix"
+    "ydotool.nix"
+    "greeter.nix"
+    "jupyter.nix"
+    "ollama.nix"
+  ];
 
   networking = {
     hostName = "matte";
