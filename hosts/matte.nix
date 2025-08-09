@@ -32,6 +32,9 @@ in
     firewall.enable = false;
   };
 
+  hardware.enableAllFirmware = true;
+  hardware.firmware = [ pkgs.sof-firmware ];
+
   environment = {
     sessionVariables = import ../variables.nix;
     systemPackages = [ pkgs.cloudflared ];
