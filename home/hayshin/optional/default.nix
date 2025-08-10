@@ -2,8 +2,8 @@
   imports = [
     ./browsers
     ./other
-    ./office
-    ./media
+    ./office.nix
+    ./media.nix
     ./development
     ./desktops
   ];
