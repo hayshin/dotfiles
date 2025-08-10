@@ -1,0 +1,216 @@
+{
+  "icon_theme": "Colored Zed Icons Theme Dark",
+  "scroll_sensitivity": 2.0,
+  "fast_scroll_sensitivity": 8.0,
+  "agent": {
+    "always_allow_tool_actions": true,
+    "profiles": {
+      "ask": {
+        "name": "Ask",
+        "tools": {
+          "contents": true,
+          "diagnostics": true,
+          "fetch": true,
+          "list_directory": true,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "open": true,
+          "grep": true,
+          "thinking": true,
+          "web_search": true
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {
+          "mcp-server-context7": {
+            "tools": {
+              "resolve-library-id": true,
+              "get-library-docs": true
+            }
+          }
+        }
+      },
+      "minimal": {
+        "name": "Minimal",
+        "tools": {
+          "edit_file": false
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {
+          "mcp-server-context7": {
+            "tools": {
+              "resolve-library-id": true,
+              "get-library-docs": true
+            }
+          }
+        }
+      }
+    },
+    "default_profile": "write",
+    "model_parameters": [],
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4"
+    },
+    // "scroll_sensitivity": 2.0,
+    "version": "2"
+  },
+  "helix_mode": true,
+  "vim": {
+    "use_system_clipboard": "on_yank",
+    "default_mode": "helix_normal"
+  },
+  "ui_font_size": 16,
+  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_size": 17,
+  "buffer_font_weight": 400,
+  "terminal": {
+    "font_family": "JetBrains Mono",
+    "font_size": 16,
+    "font_weight": 300,
+    "line_height": "standard"
+  },
+  "hide_mouse": "on_typing_and_movement",
+  "unnecessary_code_fade": 0.3,
+  "soft_wrap": "editor_width",
+  "preferred_line_length": 80,
+  "show_wrap_guides": true,
+  "gutter": {
+    "line_numbers": true, // Show/hide line numbers in the gutter.
+    "runnables": false, // Show/hide runnables buttons in the gutter.
+    "breakpoints": false, // Show/hide show breakpoints in the gutter.
+    "folds": false, // Show/hide show fold buttons in the gutter.
+    "min_line_number_digits": 2 // Reserve space for N digit line numbers
+  },
+  "relative_line_numbers": true,
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Material Helix",
+    "dark": "One Dark"
+  },
+  "diagnostics": {
+    "enabled": true,
+    "severity": "error",
+    "show": "all"
+  },
+  "tabs": {
+    "show_diagnostics": "all"
+  },
+  "format_on_save": "on",
+  "formatter": {
+    "code_actions": {
+      "source.addMissingImports.ts": true
+    }
+  },
+  "languages": {
+    "JavaScript": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "quickfix.biome": true,
+        "source.organizeImports.biome": true
+      }
+    },
+    "TypeScript": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "quickfix.biome": true,
+        "source.organizeImports.biome": true
+      }
+    },
+    "JSX": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "quickfix.biome": true,
+        "source.organizeImports.biome": true
+      }
+    },
+    "TSX": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "quickfix.biome": true,
+        "source.organizeImports.biome": true
+      }
+    },
+    "Svelte": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "quickfix.biome": true,
+        "source.organizeImports.biome": true
+      }
+    },
+    "JSON": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      }
+    },
+    "JSONC": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      }
+    },
+    "CSS": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      }
+    },
+    "GraphQL": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      }
+    }
+  },
+  "overrides": [
+    {
+      "includes": [
+        "**/*.svelte",
+        "**/*.astro",
+        "**/*.vue"
+      ],
+      "linter": {
+        "rules": {
+          "style": {
+            "useConst": "off",
+            "useImportType": "off"
+          },
+          "correctness": {
+            "noUnusedVariables": "off",
+            "noUnusedImports": "off"
+          }
+        }
+      }
+    }
+  ]
+}

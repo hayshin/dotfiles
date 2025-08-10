@@ -1,0 +1,168 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "ctrl-/": "editor::ToggleComments",
+      // "ctrl-c": "vim::NormalBefore",
+      "ctrl-p": "editor::ShowSignatureHelp",
+      // "ctrl-q": "workspace::CloseWindow",
+      "escape": "vim::SwitchToHelixNormalMode",
+      "ctrl-s": "workspace::Save",
+      "j k": "vim::SwitchToHelixNormalMode"
+    }
+  },
+  {
+    "context": "vim_mode == helix_normal && !menu",
+    "bindings": {
+      "space y": "editor::Copy",
+      "space x": "editor::Cut",
+      "space p": "editor::Paste",
+      "space q": "pane::CloseActiveItem",
+      "space shift-r": "editor::Paste",
+      "space r": "editor::Rename",
+      // "x": "vim::HelixDelete",
+      // ";": ["editor::Newline", "vim::NormalBefore"],
+      // "alt-i": "pane::ActivateUp",
+      // "alt-j": "pane::ActivateLeft",
+      // "alt-k": "pane::ActivateDown",
+      // "alt-l": "pane::ActivateRight",
+      "shift-b": "vim::NextWordStart",
+      "ctrl-/": "editor::ToggleComments",
+      // "ctrl-i": "vim::SelectPreviousSibling",
+      "ctrl-j": "editor::SelectToBeginningOfLine",
+      // "ctrl-k": "vim::SelectNextSibling",
+      "ctrl-l": "editor::SelectToEndOfLine",
+      // "ctrl-q": "workspace::CloseActiveItem",
+      "ctrl-s": "workspace::Save",
+      "shift-h": "vim::StartOfLine",
+      // "shift-i": ["workspace::SendKeystrokes", "v i"],
+
+      "shift-i": "editor::SelectUp",
+      "shift-j": "editor::SelectLeft",
+      "shift-k": "editor::SelectDown",
+      "shift-l": "editor::SelectRight",
+      // "r": "vim::PushReplace",
+      "shift-w": "editor::SelectToPreviousWordStart",
+      "shift-e": "editor::SelectToNextWordEnd",
+      "a": "vim::InsertAfter",
+      "b": "vim::NextWordStart",
+      "h": "vim::InsertBefore",
+      "i": "vim::Up",
+      "j": "vim::Left",
+      "k": "vim::Down",
+      "l": "vim::Right",
+      "w": "vim::PreviousWordStart",
+      "%": "editor::SelectAll",
+      "p": "vim::Paste",
+      "y": "editor::Copy",
+      "shift-r": "vim::Paste"
+    }
+  },
+  {
+    "context": "vim_mode == helix_normal && !menu",
+    "bindings": {
+      // "ctrl-w ctrl-i": "pane::ActivateUp",
+      // "ctrl-w ctrl-j": "pane::ActivateLeft",
+      // "ctrl-w ctrl-k": "pane::ActivateDown",
+      // "ctrl-w ctrl-l": "pane::ActivateRight",
+      // "ctrl-w i": "pane::ActivateUp",
+      // "ctrl-w j": "pane::ActivateLeft",
+      // "ctrl-w k": "pane::ActivateDown",
+      // "ctrl-w l": "pane::ActivateRight",
+      // "ctrl-w shift-i": "pane::SwapUp",
+      // "ctrl-w shift-j": "pane::SwapLeft",
+      // "ctrl-w shift-k": "pane::SwapDown"
+    }
+  },
+  {
+    "context": "vim_mode == helix_normal && !menu",
+    "bindings": {
+      "shift-z shift-i": "vim::PageUp",
+      "shift-z shift-k": "vim::PageDown",
+      "shift-z i": "vim::ScrollUp",
+      "shift-z k": "vim::ScrollDown",
+      "z shift-i": "vim::PageUp",
+      "z shift-k": "vim::PageDown",
+      "z i": "vim::ScrollUp",
+      "z k": "vim::ScrollDown"
+    }
+  },
+  {
+    "context": "vim_mode == helix_normal && !menu",
+    "bindings": {
+      "g i": "vim::Up",
+      "g j": "vim::StartOfLine",
+      "g k": "vim::Down"
+    }
+  },
+  {
+    "context": "vim_mode == visual && !menu",
+    "bindings": {
+      // "alt-i": "vim::ExpandSelection",
+      // "alt-j": "vim::SelectPreviousSibling",
+      // "alt-k": "vim::ShrinkSelection",
+      // "alt-l": "vim::SelectNextSibling",
+      // "shift-b": "vim::NextLongWordStart",
+      "ctrl-/": "editor::ToggleComments",
+      "ctrl-c": "vim::NormalBefore",
+      // "ctrl-q": "workspace::CloseActiveItem",
+      "ctrl-s": "workspace::Save",
+      "shift-h": "vim::StartOfLine",
+      "shift-i": "vim::Up",
+      "shift-j": "vim::Left",
+      "shift-k": "vim::Down",
+      "shift-l": "vim::Right",
+      // "shift-w": "vim::PreviousLongWordStart",
+      "b": "vim::NextWordStart",
+      "h": "vim::InsertBefore",
+      "i": "vim::Up",
+      "j": "vim::Left",
+      "k": "vim::Down",
+      "l": "vim::Right",
+      "w": "vim::PreviousWordStart",
+      "v": "vim::SwitchToHelixNormalMode"
+    }
+  },
+  {
+    "context": "vim_mode == visual && !menu",
+    "bindings": {
+      // "ctrl-w ctrl-i": "pane::ActivateUp",
+      // "ctrl-w ctrl-j": "pane::ActivateLeft",
+      // "ctrl-w ctrl-k": "pane::ActivateDown",
+      // "ctrl-w i": "pane::ActivateUp",
+      // "ctrl-w j": "pane::ActivateLeft",
+      // "ctrl-w k": "pane::ActivateDown",
+      // "ctrl-w shift-i": "pane::SwapUp",
+      // "ctrl-w shift-j": "pane::SwapLeft",
+      // "ctrl-w shift-k": "pane::SwapDown"
+    }
+  },
+  {
+    "context": "vim_mode == visual && !menu",
+    "bindings": {
+      "shift-z shift-i": "vim::PageUp",
+      "shift-z shift-k": "vim::PageDown",
+      "shift-z i": "vim::ScrollUp",
+      "shift-z k": "vim::ScrollDown",
+      "z shift-i": "vim::PageUp",
+      "z shift-k": "vim::PageDown",
+      "z i": "vim::ScrollUp",
+      "z k": "vim::ScrollDown"
+    }
+  },
+  {
+    "context": "vim_mode == visual && !menu",
+    "bindings": {
+      "g i": "vim::Up",
+      "g j": "vim::StartOfLine",
+      "g k": "vim::Down"
+    }
+  }
+]
