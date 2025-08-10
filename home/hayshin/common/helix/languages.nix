@@ -13,7 +13,65 @@
       formatter = {
         command = "ruff";
       };
-      language-servers = [ "basedpyright" ];
+      language-servers = [
+        "pyright"
+        "basedpyright"
+      ];
+    }
+    {
+      name = "javascript";
+      auto-format = true;
+      language-servers = [
+        "biome"
+        "typescript-language-servers"
+      ];
+    }
+    {
+      name = "typescript";
+      auto-format = true;
+      language-servers = [
+        "biome"
+        "typescript-language-servers"
+      ];
+    }
+    {
+      name = "tsx";
+      auto-format = true;
+      language-servers = [
+        "biome"
+        "typescript-language-servers"
+      ];
+    }
+    {
+      name = "json";
+      auto-format = true;
+      language-servers = [
+        "biome"
+        "typescript-language-servers"
+      ];
+    }
+    {
+      name = "jsonc";
+      auto-format = true;
+      language-servers = [
+        "biome"
+        "typescript-language-servers"
+      ];
+    }
+    {
+      name = "css";
+      auto-format = true;
+      language-servers = [
+        "biome"
+        "typescript-language-servers"
+      ];
+    }
+    {
+      name = "svelte";
+      auto-format = true;
+      language-servers = [
+        "typescript-language-servers"
+      ];
     }
   ];
   language-server = {
@@ -32,6 +90,12 @@
       command = "clangd";
       args = [
         "--query-driver=clang++"
+      ];
+    };
+    biome = {
+      command = "biome";
+      args = [
+        "lsp-proxy"
       ];
     };
   };
