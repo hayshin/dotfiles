@@ -7,30 +7,18 @@ in
     ./hardware/iners.nix
     ./common/core
     ./common/users
-  ]
-  ++ map (concat ./common/optional) [
-    # "kdeconnect.nix"
-    "bluetooth.nix"
-    "asus.nix"
-    "stylix.nix"
-    "docker.nix"
-    "battery"
-    "kanata"
-    "hyprland.nix"
-    "audio.nix"
-    "security.nix"
-    "nix-ld.nix"
-    "ydotool.nix"
-    "greeter.nix"
-    "jupyter.nix"
-    "ollama.nix"
+    ./optional/personal
+    ./optional/programs
+    ./optional/archive.nix
+    ./optional/docker.nix
+    ./optional/nix-ld.nix
+    ./optional/stylix.nix
   ];
 
   networking = {
     hostName = "iners";
     networkmanager.enable = true;
     firewall.enable = false;
-
   };
 
   environment = {

@@ -7,23 +7,12 @@ in
     ./hardware/matte.nix
     ./common/core
     ./common/users
-  ]
-  ++ map (concat ./common/optional) [
-    "archive.nix"
-    "steam.nix"
-    "bluetooth.nix"
-    "stylix.nix"
-    "docker.nix"
-    "battery"
-    "kanata"
-    "hyprland.nix"
-    "audio.nix"
-    "security.nix"
-    "nix-ld.nix"
-    "ydotool.nix"
-    "greeter.nix"
-    "jupyter.nix"
-    "ollama.nix"
+    ./optional/personal
+    ./optional/programs
+    ./optional/archive.nix
+    ./optional/docker.nix
+    ./optional/nix-ld.nix
+    ./optional/stylix.nix
   ];
 
   networking = {
