@@ -49,8 +49,8 @@
 		"default_profile": "write",
 		"model_parameters": [],
 		"default_model": {
-			"provider": "zed.dev",
-			"model": "claude-sonnet-4"
+			"provider": "copilot_chat",
+			"model": "gpt-4.1"
 		}
 		// "scroll_sensitivity": 2.0,
 	},

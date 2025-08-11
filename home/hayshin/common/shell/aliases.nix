@@ -10,4 +10,5 @@
   reboot = "systemctl reboot";
   cd = "z";
   cat = "bat";
+  zed = "zeditor";
 }

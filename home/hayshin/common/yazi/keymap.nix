@@ -1,5 +1,5 @@
 {
-  manager.prepend_keymap = [
+  mgr.prepend_keymap = [
     {
       on = [ "i" ];
       run = "arrow -1";

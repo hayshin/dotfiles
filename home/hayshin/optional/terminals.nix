@@ -24,4 +24,13 @@
       "ctrl+page_down" = "scroll_page_down";
     };
   };
+  programs.ghostty = {
+    enable = true;
+    settings = {
+
+      # theme = "Abernathy";
+      window-decoration = "none";
+      window-padding-y = "10,0";
+    };
+  };
 }

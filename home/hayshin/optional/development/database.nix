@@ -1,9 +1,0 @@
-{ pkgs, ... }:
-{
-  home.packages = with pkgs; [
-    sqlite
-    postgresql
-
-    lazysql
-  ];
-}

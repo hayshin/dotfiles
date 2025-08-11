@@ -13,5 +13,6 @@
   home.packages = with pkgs; [
     tokei
     cocogitto
+    git-quick-stats
   ];
 }

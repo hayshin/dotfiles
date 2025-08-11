@@ -1,14 +1,9 @@
-{ pkgs, inputs, ... }:
-let
-  system = "x86_64-linux";
-in
+{ pkgs, ... }:
 {
   imports = [
     ./stylix.nix
     ./shell
     ./yazi
-    ./helix
-    ./btop.nix
     ./helix
   ];
 
@@ -19,15 +14,8 @@ in
     preferXdgDirectories = true;
     sessionVariables = import ./variables.nix;
     # shellAliases = import ./shell/shell_aliases.nix { nix_dir = "$NIX"; };
-    # activation.restartHyprpaper = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    #   if systemctl --user is-active --quiet hyprpaper.service; then
-    #     systemctl --user restart hyprpaper.service
-    #   else
-    #     systemctl --user start hyprpaper.service
-    #   fi
-    # '';
-    packages = [
-      pkgs.siyuan
+    packages = with pkgs; [
+      btop
     ];
   };
   programs.home-manager.enable = true;
