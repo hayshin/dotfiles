@@ -6,7 +6,7 @@ in
     ./hardware/nanus.nix
     ./common/core
     ./common/users
-    ./common/optional/ssh.nix
+    ./common/optional/server
     ./common/optional/docker.nix
   ];
 
