@@ -16,8 +16,8 @@
           gesture swipe right 3 ydotool key 29:1 42:1 15:1 15:0 42:0 29:0
           gesture swipe up 3 ydotool key 29:1 42:1 20:1 20:0 42:0 29:0
 
-          gesture swipe left_up 3 ydotool key 29:1 56:1 16:1 16:0 56:0 29:0
-          gesture swipe right_up 3 ydotool key 29:1 56:1 18:1 18:0 56:0 29:0
+          # gesture swipe left_up 3 ydotool key 29:1 56:1 16:1 16:0 56:0 29:0
+          # gesture swipe right_up 3 ydotool key 29:1 56:1 18:1 18:0 56:0 29:0
 
           gesture hold on+2 3 ydotool key 29:1 20:1 20:0 29:0
 
