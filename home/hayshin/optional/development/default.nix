@@ -17,6 +17,10 @@
     rust-analyzer
     rustfmt
 
+    # go
+    go
+    gopls
+
     # c++
     gcc
     clang-tools

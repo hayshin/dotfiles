@@ -7,12 +7,12 @@ in
     ./hardware/matte.nix
     ./common/core
     ./common/users
-    ./optional/personal
-    ./optional/programs
-    ./optional/archive.nix
-    ./optional/docker.nix
-    ./optional/nix-ld.nix
-    ./optional/stylix.nix
+    ./common/optional/personal
+    ./common/optional/programs
+    ./common/optional/archive.nix
+    ./common/optional/docker.nix
+    ./common/optional/nix-ld.nix
+    ./common/optional/stylix.nix
   ];
 
   networking = {

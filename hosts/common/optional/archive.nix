@@ -5,5 +5,6 @@
     unzip
 
     unrar-free
+    xdotool
   ];
 }
