@@ -2,7 +2,6 @@
 {
   services.greetd = {
     enable = true;
-    vt = 1;
     settings = {
       default_session = {
         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --remember-session";
@@ -14,5 +13,5 @@
       # };
     };
   };
-  environment.systemPackages = [ pkgs.greetd.tuigreet ];
+  environment.systemPackages = [ pkgs.tuigreet ];
 }

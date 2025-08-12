@@ -1,4 +1,5 @@
 # defined hosts names for all my machines
+{ pkgs, ... }:
 {
   networking = {
     hosts = {
@@ -7,6 +8,7 @@
       "192.168.0.10" = [ "iners" ];
     };
   };
+  environment.systemPackages = [ pkgs.dig ];
   # services.avahi = {
   #   enable = true;
   #   nssmdns4 = true;
