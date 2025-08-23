@@ -8,7 +8,10 @@
       "192.168.0.10" = [ "iners" ];
     };
   };
-  environment.systemPackages = [ pkgs.dig ];
+  environment.systemPackages = [
+    pkgs.dig
+    pkgs.lsof
+  ];
   # services.avahi = {
   #   enable = true;
   #   nssmdns4 = true;

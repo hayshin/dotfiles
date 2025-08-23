@@ -17,7 +17,7 @@
       substituters = [
         # high priority since it's almost always used
         "https://cache.nixos.org"
-        "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+        # "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
         "https://nix-community.cachix.org"
         "https://nix-gaming.cachix.org"
         "https://anyrun.cachix.org"

@@ -1,8 +1,9 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 {
   imports = [
     ./devenv.nix
     ./zsh.nix
+    ./ssh.nix
     ./nushell
   ];
   home.packages = with pkgs; [

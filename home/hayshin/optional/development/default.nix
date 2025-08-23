@@ -29,6 +29,11 @@
     nil
     nixfmt-rfc-style
 
+    # java
+    # (jdk.override { enableJavaFX = true; })
+    jdk11
+    openjfx17
+
     # databases
     sqlite
     postgresql

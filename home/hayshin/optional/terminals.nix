@@ -2,12 +2,14 @@
   programs.kitty = {
     enable = true;
     settings = {
+      allow_remote_control = true;
       window_padding_width = 4;
       confirm_os_window_close = 0;
-      clear_all_shortcuts = "yes";
+      # clear_all_shortcuts = "yes";
       update_check_interval = 0;
     };
     keybindings = {
+      "ctrl+y" = "launch --stdin-source=@last_cmd_output --type=clipboard";
       "ctrl+c" = "copy_or_interrupt";
       "ctrl+v" = "paste_from_clipboard";
 
