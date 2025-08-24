@@ -38,7 +38,9 @@ let
   git = baseCommand "git" {
     gm = "commit -m";
     gc = "clone";
-    gp = "pull";
+    gp = "push";
+    gpo = "push origin";
+    gg = "pull";
     ga = "add";
     gi = ''bash -c "init; git add .; git commit -m "init"; "'';
     last-commit-hash = ''log -1 --format="%H"'';

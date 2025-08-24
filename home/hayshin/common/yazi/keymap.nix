@@ -12,5 +12,9 @@
       on = [ "j" ];
       run = "leave";
     }
+    {
+      on = [ "s" ];
+      run = "search --via=fd --args='-H -I'";
+    }
   ];
 }

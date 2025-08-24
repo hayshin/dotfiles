@@ -44,7 +44,6 @@ in
       defaultApplications = {
         "text/plain" = "editor.desktop";
         "text/markdown" = "editor.desktop";
-
         "text/html" = "browser.desktop";
         "x-scheme-handler/http" = "browser.desktop";
         "x-scheme-handler/https" = "browser.desktop";
