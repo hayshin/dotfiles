@@ -14,6 +14,7 @@ let
     zz = "~/dev";
     zzm = "~/dev/meeplix";
     zzp = "~/dev/probent";
+    zd = "~/downloads";
     zi = "~/images";
     ziw = "~/images/wallpapers";
     zn = "~/nix";
@@ -31,13 +32,16 @@ let
   };
   docker = baseCommand "docker" {
     d = "";
+    dc = "compose";
     du = "compose up";
+    de = "compose exec";
     dd = "compose down";
     dub = "compose up --build";
   };
   git = baseCommand "git" {
     gm = "commit -m";
     gc = "clone";
+    gs = "status";
     gp = "push";
     gpo = "push origin";
     gg = "pull";

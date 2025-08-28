@@ -1,14 +1,14 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    anydesk
+    # anydesk
     anytype
-    gparted
-    libreoffice
+    # gparted
+    # libreoffice
     pandoc
-    qbittorrent
-    zathura
-    zoom-us
-    open-webui
+    # qbittorrent
+    # zathura
+    # zoom-us
+    # open-webui
   ];
 }

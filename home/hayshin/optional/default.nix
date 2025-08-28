@@ -10,7 +10,6 @@
   ];
   home.packages = with pkgs; [
     discord
-    webcord
     obsidian
     telegram-desktop
   ];

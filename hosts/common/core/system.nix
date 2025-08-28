@@ -9,8 +9,16 @@
     home-manager
   ];
 
-  fonts.packages = with pkgs; [
-    font-awesome
-    jetbrains-mono
-  ];
+  fonts = {
+    packages = with pkgs; [
+      font-awesome
+      jetbrains-mono
+    ];
+    fontconfig = {
+      enable = true;
+    };
+    fontDir = {
+      enable = true;
+    };
+  };
 }

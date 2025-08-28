@@ -1,7 +1,7 @@
 {
   imports = [
     ./ollama.nix
-    ./steam.nix
+    # ./steam.nix
     ./ssh.nix
   ];
 }
