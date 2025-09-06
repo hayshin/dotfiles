@@ -49,7 +49,7 @@
 				}
 			}
 		},
-		"default_profile": "ask",
+		"default_profile": "write",
 		"model_parameters": [],
 		"default_model": {
 			"provider": "copilot_chat",
@@ -105,7 +105,21 @@
 	},
 	"languages": {
 		"Python": {
-			"language_servers": ["!pylsp", "pyright", "ruff"]
+			"language_servers": ["!pylsp", "pyright", "ruff"],
+			"format_on_save": "on",
+			"formatter": [
+				{
+					"code_actions": {
+						"source.organizeImports.ruff": true,
+						"source.fixAll.ruff": true
+					}
+				},
+				{
+					"language_server": {
+						"name": "ruff"
+					}
+				}
+			]
 		},
 		"JavaScript": {
 			"formatter": { "language_server": { "name": "biome" } },

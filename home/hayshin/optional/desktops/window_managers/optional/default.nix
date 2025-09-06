@@ -1,7 +1,8 @@
 {
   imports = [
     ./libinput-gestures.nix
-    ./gammastep.nix
+    ./wlsunset.nix
+    # ./gammastep.nix
     # ./kdeconnect.nix
   ];
 }

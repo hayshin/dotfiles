@@ -8,6 +8,7 @@ let
     ccr = "refactor";
     ccx = "fix";
     ccd = "docs";
+    ccc = "chore";
   };
 
   cd = baseCommand "z" {
@@ -40,13 +41,18 @@ let
   };
   git = baseCommand "git" {
     gm = "commit -m";
+    gb = "branch";
+    gs = "switch";
     gc = "clone";
-    gs = "status";
+    gch = "checkout";
+    gst = "status";
     gp = "push";
     gpo = "push origin";
+    gpod = "push origin dev";
+    gpom = "push origin master";
     gg = "pull";
     ga = "add";
-    gi = ''bash -c "init; git add .; git commit -m "init"; "'';
+    gi = "init";
     last-commit-hash = ''log -1 --format="%H"'';
   };
 in

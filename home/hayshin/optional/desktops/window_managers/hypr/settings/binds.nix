@@ -45,8 +45,8 @@ in
       "$mod, P, exec, hyprshot -m region -o ${screenshotsDir}"
       "$mod, O, exec, pin, toggle"
 
-      "$mod, minus, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | grep 'float:' | awk '{print $2 - 0.25}')"
-      "$mod, equal, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | grep 'float:' | awk '{print $2 + 0.25}')"
+      "$mod, minus, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | grep 'float:' | awk '{print $2 - 1}')"
+      "$mod, equal, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | grep 'float:' | awk '{print $2 + 1}')"
 
       "$mod, backslash, exec, ${swayosd} --output-volume mute-toggle"
 
