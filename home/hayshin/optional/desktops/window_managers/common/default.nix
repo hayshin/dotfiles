@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   imports = [
     ./dunst.nix # notification
@@ -6,4 +7,5 @@
     ./keyring.nix # keyring
     ./xdg.nix
   ];
+  home.packages = with pkgs; [ ddcutil ];
 }

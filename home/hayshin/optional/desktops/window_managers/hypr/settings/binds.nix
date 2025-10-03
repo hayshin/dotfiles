@@ -86,10 +86,20 @@ in
       "$mod, up, movefocus, u"
       "$mod, down, movefocus, d"
 
+      "$mod&SHIFT, left, movewindow, l"
+      "$mod&SHIFT, right,movewindow, r"
+      "$mod&SHIFT, up, movewindow, u"
+      "$mod&SHIFT, down, movewindow, d"
+
       "$mod, J, movefocus, l"
       "$mod, L, movefocus, r"
       "$mod, I, movefocus, u"
       "$mod, K, movefocus, d"
+
+      "$mod&SHIFT, J, movewindow, l"
+      "$mod&SHIFT, L, movewindow, r"
+      "$mod&SHIFT, I, movewindow, u"
+      "$mod&SHIFT, K, movewindow, d"
 
       "$mod, S, togglespecialworkspace, magic"
       "$mod SHIFT, S, movetoworkspace, special:magic"
