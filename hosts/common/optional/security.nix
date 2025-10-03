@@ -6,10 +6,7 @@
         users = [ "hayshin" ];
         commands = [
           {
-            command = [
-              "/home/hayshin/.nix-profile/bin/vpn"
-              "vpn"
-            ];
+            command = "/home/hayshin/.nix-profile/bin/openfortivpn";
             options = [
               "NOPASSWD"
             ];

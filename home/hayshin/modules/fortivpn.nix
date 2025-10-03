@@ -6,8 +6,6 @@
 pkgs.writeShellScriptBin "vpn" ''
   #!/bin/bash
 
-  sudo -v || exit 1
-
   if [ -z "$1" ]; then
       read -p "Введите OTP-код аутенфикатора: " OTP_CODE
   else
