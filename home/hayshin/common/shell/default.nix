@@ -8,6 +8,7 @@
   ];
   home.packages = with pkgs; [
     fastfetch
+    tree
     # Add your packages here
   ];
   programs = {

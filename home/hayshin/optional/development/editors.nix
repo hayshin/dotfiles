@@ -2,6 +2,7 @@
 {
   home.packages = with pkgs; [
     zed-editor-fhs
+    code-cursor-fhs
     vscode
   ];
 

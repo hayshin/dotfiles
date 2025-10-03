@@ -3,12 +3,16 @@
   home.packages = with pkgs; [
     # anydesk
     anytype
-    # gparted
-    # libreoffice
+    gparted
+    libreoffice
     pandoc
+    speedtest-cli
+    openfortivpn
+    # openfortivpn-webview
+    openfortivpn-webview-qt
     # qbittorrent
     # zathura
-    # zoom-us
+    zoom-us
     # open-webui
   ];
 }

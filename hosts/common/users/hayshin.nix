@@ -11,6 +11,8 @@
       "input"
       "ydotool"
       "docker"
+      "hdfs"
+      "hadoop"
     ];
   };
 }

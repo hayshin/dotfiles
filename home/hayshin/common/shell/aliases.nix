@@ -31,6 +31,10 @@ let
     ua = "add";
     ui = "sync";
   };
+  nix = baseCommand "" {
+    nr = "rebuild";
+    nh = "home_rebuild";
+  };
   docker = baseCommand "docker" {
     d = "";
     dc = "compose";
@@ -82,3 +86,4 @@ in
 // uv
 // docker
 // git
+// nix

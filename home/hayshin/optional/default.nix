@@ -12,6 +12,7 @@
     discord
     obsidian
     telegram-desktop
+    openvpn
   ];
   programs.obs-studio = {
     enable = true;
