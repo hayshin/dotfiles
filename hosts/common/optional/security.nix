@@ -1,17 +1,15 @@
 {
   security.sudo = {
+    enable = true;
     extraRules = [
       {
         users = [ "hayshin" ];
         commands = [
           {
-            command = "/home/hayshin/vpn.sh";
-            options = [
-              "NOPASSWD"
+            command = [
+              "/home/hayshin/.nix-profile/bin/vpn"
+              "vpn"
             ];
-          }
-          {
-            command = "vpn";
             options = [
               "NOPASSWD"
             ];
