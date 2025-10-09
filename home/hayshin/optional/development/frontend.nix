@@ -13,5 +13,8 @@
     svelte-language-server
 
     eas-cli
+
+    insomnia
+    postman
   ];
 }

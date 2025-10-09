@@ -31,8 +31,10 @@
 
     # java
     # (jdk.override { enableJavaFX = true; })
-    jdk11
-    openjfx17
+    # jdk11
+    # openjfx17
+    jdk8
+    maven
 
     # databases
     sqlite

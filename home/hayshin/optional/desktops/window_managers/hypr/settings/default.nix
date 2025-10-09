@@ -28,8 +28,8 @@ in
   ];
 
   monitor = [
-    "eDP-1,preferred,0x0,1, cm, srgb"
-    "desc:AOC 24B3HA2 AUFQ99A006092,1920x1080@60,1920x0,1, cm, srgb"
+    "eDP-1, 1920x1200@60, 0x0, 1.20, cm, srgb"
+    "desc:AOC 24B3HA2 AUFQ99A006092, 1920x1080@60, 1600x0, 1, cm, srgb"
     ",preferred,auto,1,mirror,eDP-1"
   ];
 

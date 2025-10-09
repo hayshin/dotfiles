@@ -14,7 +14,7 @@ in
     ./common/optional/docker.nix
     ./common/optional/nix-ld.nix
     ./common/optional/stylix.nix
-    ./common/optional/openvpn.nix
+    # ./common/optional/openvpn.nix
     ./common/optional/security.nix
   ];
 

@@ -5,6 +5,7 @@ let
   cog-commit = baseCommand "cog commit" {
     cc = "";
     ccf = "feat";
+    cct = "test";
     ccr = "refactor";
     ccx = "fix";
     ccd = "docs";
