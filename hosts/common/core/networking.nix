@@ -1,13 +1,13 @@
 # defined hosts names for all my machines
 { pkgs, ... }:
 {
-  networking = {
-    hosts = {
-      "192.168.0.50" = [ "poco" ];
-      "192.168.0.15" = [ "nanus" ];
-      "192.168.0.10" = [ "iners" ];
-    };
-  };
+  # networking = {
+  #   hosts = {
+  #     "192.168.0.50" = [ "poco" ];
+  #     "192.168.0.15" = [ "nanus" ];
+  #     "192.168.0.10" = [ "iners" ];
+  #   };
+  # };
   environment.systemPackages = [
     pkgs.dig
     pkgs.lsof

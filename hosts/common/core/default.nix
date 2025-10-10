@@ -6,5 +6,6 @@
     ./networking.nix
     ./sops.nix
     ./system.nix
+    ./aliases.nix
   ];
 }

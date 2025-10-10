@@ -53,7 +53,7 @@ in
           background-image: image(url("${sleep}"));
       }
 
-      #shutdown {
+      #poweroff {
           background-image: image(url("${power}"));
       }
 
@@ -69,7 +69,7 @@ in
           background-image: image(url("${sleep-hover}"));
       }
 
-      #shutdown:focus {
+      #poweroff:focus {
           background-image: image(url("${power-hover}"));
       }
 

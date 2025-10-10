@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, rootPath, ... }:
 let
   concat = dir: name: dir + "/${name}";
 in
@@ -28,7 +28,7 @@ in
   hardware.firmware = [ pkgs.sof-firmware ];
 
   environment = {
-    sessionVariables = import ../variables.nix;
+    sessionVariables = import (rootPath + /shared/variables.nix);
     systemPackages = [ pkgs.cloudflared ];
   };
 

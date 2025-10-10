@@ -38,7 +38,5 @@
     ripgrep-all = {
       enable = true;
     };
-
   };
-
 }

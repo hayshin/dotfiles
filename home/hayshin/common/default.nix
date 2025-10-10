@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, rootPath, ... }:
 {
   imports = [
     ./stylix.nix
@@ -13,7 +13,7 @@
     homeDirectory = "/home/hayshin";
     stateVersion = "24.05";
     preferXdgDirectories = true;
-    sessionVariables = import ./variables.nix;
+    sessionVariables = import (rootPath + /shared/variables.nix);
     # shellAliases = import ./shell/shell_aliases.nix { nix_dir = "$NIX"; };
     packages = with pkgs; [
       btop

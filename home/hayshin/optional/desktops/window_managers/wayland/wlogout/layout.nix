@@ -1,15 +1,15 @@
 [
   {
     label = "suspend";
-    action = "suspend";
-    text = "Suspend";
-    keybind = "u";
+    action = "systemctl suspend; lock";
+    text = "Sleep";
+    keybind = "s";
   }
   {
-    label = "shutdown";
+    label = "poweroff";
     action = "systemctl poweroff";
     text = "Poweroff";
-    keybind = "s";
+    keybind = "p";
   }
   {
     label = "reboot";
@@ -19,7 +19,7 @@
   }
   {
     label = "lock";
-    action = "sleep  0.1 ; lock";
+    action = "sleep 0.3 ; lock";
     text = "Lock";
     keybind = "l";
   }

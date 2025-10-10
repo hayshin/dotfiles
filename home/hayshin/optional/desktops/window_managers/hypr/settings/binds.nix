@@ -8,7 +8,7 @@ in
   #   "$mod,Super_L, exec, pkill -SIGUSR1 waybar"
   # ];
 
-  bindl = [ " , switch:Lid Switch, exec, lock" ];
+  bindl = [ " , switch:Lid Switch, exec, systemctl suspend ; lock" ];
 
   binde = [
     "$mod, apostrophe, exec, ${swayosd} --brightness raise"
