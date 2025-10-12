@@ -9,7 +9,7 @@
   home.packages = with pkgs; [
     fastfetch
     tree
-    # Add your packages here
+    dust
   ];
   programs = {
     bat = {

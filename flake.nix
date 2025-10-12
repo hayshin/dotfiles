@@ -11,6 +11,7 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     sops-nix.url = "github:Mic92/sops-nix";
 
+    hyprrun.url = "github:hayshin/hyprrun";
     caelestia-shell.url = "github:caelestia-dots/shell";
   };
   outputs =

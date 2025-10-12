@@ -2,15 +2,15 @@
 {
   home.packages = with pkgs; [
     # anydesk
-    anytype
+    # anytype
     gparted
     libreoffice
     pandoc
     speedtest-cli
     openfortivpn
-    ayugram-desktop
+    # ayugram-desktop
     # openfortivpn-webview
-    openfortivpn-webview-qt
+    # openfortivpn-webview-qt
     # qbittorrent
     # zathura
     zoom-us

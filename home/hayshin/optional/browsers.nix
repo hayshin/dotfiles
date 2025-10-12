@@ -15,11 +15,11 @@
   # programs.qutebrowser = {
   #   enable = true;
   # };
-  # programs.zen-browser = {
-  #   enable = true;
-  #   policies = {
-  #     DisableAppUpdate = true;
-  #     DisableTelemetry = true;
-  #   };
-  # };
+  programs.zen-browser = {
+    enable = true;
+    policies = {
+      DisableAppUpdate = true;
+      DisableTelemetry = true;
+    };
+  };
 }

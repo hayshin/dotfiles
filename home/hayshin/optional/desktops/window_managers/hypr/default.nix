@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 {
   imports = [
     ../common
@@ -16,5 +21,6 @@
   home.packages = [
     pkgs.hyprshot # screenshot
     pkgs.hyprpicker # color picker
+    inputs.hyprrun.defaultPackage.x86_64-linux
   ];
 }

@@ -1,13 +1,20 @@
 # defined hosts names for all my machines
 { pkgs, ... }:
 {
-  # networking = {
-  #   hosts = {
-  #     "192.168.0.50" = [ "poco" ];
-  #     "192.168.0.15" = [ "nanus" ];
-  #     "192.168.0.10" = [ "iners" ];
-  #   };
-  # };
+  networking = {
+    nameservers = [
+      "1.1.1.1"
+      "8.8.8.8"
+    ];
+    resolvconf = {
+      enable = true;
+    };
+    # hosts = {
+    #   "192.168.0.50" = [ "poco" ];
+    #   "192.168.0.15" = [ "nanus" ];
+    #   "192.168.0.10" = [ "iners" ];
+    # };
+  };
   environment.systemPackages = [
     pkgs.dig
     pkgs.lsof

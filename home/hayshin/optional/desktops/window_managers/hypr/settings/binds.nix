@@ -1,6 +1,7 @@
 { config, ... }:
 let
   swayosd = "swayosd-client";
+  run = "hyprrun";
 in
 {
 
@@ -60,14 +61,19 @@ in
       # ", XF86Calculator, exec, qalculate-gtk"
       ", XF86Lock, exec, $lock"
 
-      "$mod, RETURN, exec, $TERMINAL"
-      "$mod SHIFT, RETURN, exec, $float_terminal"
+      "$mod, RETURN, exec, ${run} $TERMINAL"
+      "$mod SHIFT, RETURN, exec, $TERMINAL"
+      # "$mod SHIFT, RETURN, exec, ${run} $float_terminal"
       "$mod, SPACE, exec, $MENU"
-      "$mod, B, exec, $BROWSER"
+      "$mod, B, exec, ${run} $BROWSER"
+      "$mod SHIFT, B, exec, $BROWSER"
       "$mod, X, exec, $TERMINAL -e $EDITOR"
       # "$mod, M, exec, $music"
       "$mod, escape, exec, $LOGOUT"
-      "$mod, E, exec, $TERMINAL -e $FILE_MANAGER"
+      "$mod, E, exec, $FILE_MANAGER"
+      "$mod SHIFT, E, e xec, $TERMINAL -e $FILE_MANAGER"
+      "$mod, C, exec, ${run} cursor"
+      "$mod SHIFT, C, exec, cursor"
       "$mod, V, exec, $CLIPBOARD"
 
       ", Pause, exec, playerctl play-pause"
