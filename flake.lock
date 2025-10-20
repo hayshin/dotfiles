@@ -314,6 +314,26 @@
         "type": "github"
       }
     },
+    "hyprland-virtual-desktops": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1759477437,
+        "narHash": "sha256-l+/PEYL75evVi605rnVP5QFeDonz9DdMNmTdPtUpMHU=",
+        "owner": "levnikmyskin",
+        "repo": "hyprland-virtual-desktops",
+        "rev": "66dcffe95e0d0eec15a5aed8d08f4367e81f395e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "levnikmyskin",
+        "repo": "hyprland-virtual-desktops",
+        "type": "github"
+      }
+    },
     "hyprrun": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -321,11 +341,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1760253870,
-        "narHash": "sha256-IIfqPCtce1AAMG5jwTDQ3giNnmVnK8/GNqv3ieh3af4=",
+        "lastModified": 1760966820,
+        "narHash": "sha256-UD1mUhlbDlRkJvEJtOdkb+Zrfh0vwCsYKcQv+xK2+zA=",
         "owner": "hayshin",
         "repo": "hyprrun",
-        "rev": "ba14ad35302ab616a98fee3bc51e330a0d1fcd1a",
+        "rev": "9955d086ddd97b333c419be5efe552b2bab48060",
         "type": "github"
       },
       "original": {
@@ -587,6 +607,7 @@
         "caelestia-shell": "caelestia-shell",
         "helix": "helix",
         "home-manager": "home-manager",
+        "hyprland-virtual-desktops": "hyprland-virtual-desktops",
         "hyprrun": "hyprrun",
         "nix-minecraft": "nix-minecraft",
         "nixos-hardware": "nixos-hardware",

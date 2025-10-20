@@ -2,6 +2,10 @@
 let
   swayosd = "swayosd-client";
   run = "hyprrun";
+  # workspace = "vdesk";
+  workspace = "split:workspace";
+  # movetoworkspace = "movetodesk";
+  movetoworkspace = "split:movetoworkspace";
 in
 {
 
@@ -9,7 +13,7 @@ in
   #   "$mod,Super_L, exec, pkill -SIGUSR1 waybar"
   # ];
 
-  bindl = [ " , switch:Lid Switch, exec, systemctl suspend ; lock" ];
+  bindl = [ " , switch:Lid Switch, exec, lock" ];
 
   binde = [
     "$mod, apostrophe, exec, ${swayosd} --brightness raise"
@@ -61,19 +65,27 @@ in
       # ", XF86Calculator, exec, qalculate-gtk"
       ", XF86Lock, exec, $lock"
 
-      "$mod, RETURN, exec, ${run} $TERMINAL"
-      "$mod SHIFT, RETURN, exec, $TERMINAL"
-      # "$mod SHIFT, RETURN, exec, ${run} $float_terminal"
+      "$mod, RETURN, exec, ${run} -e '$TERMINAL -e zellij attach zellij' -t zellij"
+      "$mod SHIFT, RETURN, exec, $TERMINAL -e zellij"
+
       "$mod, SPACE, exec, $MENU"
-      "$mod, B, exec, ${run} $BROWSER"
-      "$mod SHIFT, B, exec, $BROWSER"
-      "$mod, X, exec, $TERMINAL -e $EDITOR"
+
+      "$mod, B, exec, ${run} -e vivaldi -c vivaldi"
+      "$mod SHIFT, B, exec, vivaldi"
+
+      "$mod, W, exec, ${run} -e Telegram -c telegram"
+      "$mod SHIFT, W, exec, Telegram"
+
+      "$mod, X, exec, ${run} -e 'cursor' -c cursor"
+      "$mod SHIFT, X, exec, cursor"
       # "$mod, M, exec, $music"
       "$mod, escape, exec, $LOGOUT"
-      "$mod, E, exec, $FILE_MANAGER"
-      "$mod SHIFT, E, e xec, $TERMINAL -e $FILE_MANAGER"
-      "$mod, C, exec, ${run} cursor"
-      "$mod SHIFT, C, exec, cursor"
+
+      "$mod, E, exec, ${run} -e yazi -t yazi"
+      "$mod SHIFT, E, exec, yazi"
+
+      # "$mod, C, exec, ${run} cursor"
+      # "$mod SHIFT, C, exec, cursor"
       "$mod, V, exec, $CLIPBOARD"
 
       ", Pause, exec, playerctl play-pause"
@@ -82,7 +94,8 @@ in
       "$mod, comma, exec, playerctl previous"
 
       "$mod, Q, killactive,"
-      "$mod, F, fullscreen,"
+      "$mod, F, fullscreen,1"
+      "$mod SHIFT, F, fullscreen,0"
       "$mod, U, pseudo,"
       "$mod SHIFT, T, togglesplit,"
       "$mod, T, togglefloating,"
@@ -102,20 +115,23 @@ in
       "$mod, I, movefocus, u"
       "$mod, K, movefocus, d"
 
-      "$mod&SHIFT, J, movewindow, l"
-      "$mod&SHIFT, L, movewindow, r"
-      "$mod&SHIFT, I, movewindow, u"
-      "$mod&SHIFT, K, movewindow, d"
+      "$mod SHIFT, J, movewindow, l"
+      "$mod SHIFT, L, movewindow, r"
+      "$mod SHIFT, I, movewindow, u"
+      "$mod SHIFT, K, movewindow, d"
 
       "$mod, S, togglespecialworkspace, magic"
       "$mod SHIFT, S, movetoworkspace, special:magic"
 
-      "$mod, mouse_down, workspace, e+1"
-      "$mod, mouse_up, workspace, e-1"
-      "ALT, tab, workspace, m+1"
-      "ALT SHIFT, tab, workspace, m-1"
-      "$mod, tab, workspace, m+1"
-      "$mod SHIFT, tab, workspace, m-1"
+      "$mod, mouse_down, ${workspace}, e+1"
+      "$mod, mouse_up, ${workspace}, e-1"
+      "ALT, tab, ${workspace}, m+1"
+      "ALT SHIFT, tab, ${workspace}, m-1"
+      "$mod, tab, ${workspace}, m+1"
+      "$mod SHIFT, tab, ${workspace}, m-1"
+
+      "$mod, M, split:swapactiveworkspaces"
+      "$mod SHIFT, M, split:grabroguewindows"
     ]
     ++ (
       # workspaces
@@ -127,8 +143,8 @@ in
             ws = i + 1;
           in
           [
-            "$mod, code:1${toString i}, workspace, ${toString ws}"
-            "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
+            "$mod, code:1${toString i}, ${workspace}, ${toString ws}"
+            "$mod SHIFT, code:1${toString i}, ${movetoworkspace}, ${toString ws}"
           ]
         ) 9
       )

@@ -13,6 +13,13 @@
 
     hyprrun.url = "github:hayshin/hyprrun";
     caelestia-shell.url = "github:caelestia-dots/shell";
+
+    hyprland-virtual-desktops = {
+      url = "github:levnikmyskin/hyprland-virtual-desktops";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # raise.url = "github:neg-serg/raise";
   };
   outputs =
     {
@@ -23,6 +30,7 @@
       helix,
       sops-nix,
       nixos-hardware,
+      hyprland-virtual-desktops,
       ...
     }@inputs:
     let
