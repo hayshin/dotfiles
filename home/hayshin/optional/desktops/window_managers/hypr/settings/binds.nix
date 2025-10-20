@@ -31,9 +31,9 @@ in
 
   bindm = [
     "$mod, mouse:272, movewindow"
-    "$mod, Control_L, movewindow"
+    # "$mod, Control_L, movewindow"
     "$mod, mouse:273, resizewindow"
-    "$mod, ALT_L, resizewindow"
+    # "$mod, ALT_L, resizewindow"
   ];
 
   bind =
@@ -42,6 +42,7 @@ in
       screenshotsDir = picturesDir + "/screenshots";
     in
     [
+      "$mod, R, submap, resize"
       "$mod, PRINT, exec, hyprpicker -a"
       ", PRINT, exec, hyprshot -m region -o ${screenshotsDir}/screenshots"
       "SHIFT, PRINT, exec, hyprshot -m output -o ${screenshotsDir}"
@@ -94,10 +95,10 @@ in
       "$mod, comma, exec, playerctl previous"
 
       "$mod, Q, killactive,"
-      "$mod, F, fullscreen,1"
-      "$mod SHIFT, F, fullscreen,0"
-      "$mod SHIFT, T, togglesplit,"
-      "$mod, T, togglefloating,"
+      "$mod, F, fullscreen, 1"
+      "$mod SHIFT, F, fullscreen, 0"
+      "$mod SHIFT, T, togglesplit, "
+      "$mod, T, togglefloating, "
 
       "$mod, left, movefocus, l"
       "$mod, right, movefocus, r"

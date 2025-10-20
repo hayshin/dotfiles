@@ -16,6 +16,7 @@
     enable = true;
     xwayland.enable = true;
     settings = import ./settings { inherit config; };
+    submaps = import ./settings/submaps.nix;
     plugins = [
       inputs.hyprland-virtual-desktops.packages.${pkgs.system}.virtual-desktops
       pkgs.hyprlandPlugins.hyprsplit
