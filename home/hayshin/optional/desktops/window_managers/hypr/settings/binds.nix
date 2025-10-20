@@ -96,7 +96,6 @@ in
       "$mod, Q, killactive,"
       "$mod, F, fullscreen,1"
       "$mod SHIFT, F, fullscreen,0"
-      "$mod, U, pseudo,"
       "$mod SHIFT, T, togglesplit,"
       "$mod, T, togglefloating,"
 
@@ -120,13 +119,16 @@ in
       "$mod SHIFT, I, movewindow, u"
       "$mod SHIFT, K, movewindow, d"
 
+      "$mod, O, ${workspace}, r+1"
+      "$mod, U, ${workspace}, r-1"
+      "$mod SHIFT, O, ${movetoworkspace}, r+1"
+      "$mod SHIFT, U, ${movetoworkspace}, r-1"
+
       "$mod, S, togglespecialworkspace, magic"
       "$mod SHIFT, S, movetoworkspace, special:magic"
 
       "$mod, mouse_down, ${workspace}, e+1"
       "$mod, mouse_up, ${workspace}, e-1"
-      "ALT, tab, ${workspace}, m+1"
-      "ALT SHIFT, tab, ${workspace}, m-1"
       "$mod, tab, ${workspace}, m+1"
       "$mod SHIFT, tab, ${workspace}, m-1"
 

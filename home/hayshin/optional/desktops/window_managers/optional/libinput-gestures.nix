@@ -21,11 +21,11 @@
 
           gesture hold on+2 3 ydotool key 29:1 20:1 20:0 29:0
 
-          gesture swipe left 4 hyprctl dispatch workspace +1
-          gesture swipe right 4 hyprctl dispatch workspace -1
+          gesture swipe left 4 hyprctl dispatch workspace m+1
+          gesture swipe right 4 hyprctl dispatch workspace m-1
 
-          gesture pinch out 4 ydotool key 125:1 13:1 13:0 125:0
-          gesture pinch in 4 ydotool key 125:1 12:1 12:0 125:0
+          # gesture pinch out 4 ydotool key 125:1 13:1 13:0 125:0
+          # gesture pinch in 4 ydotool key 125:1 12:1 12:0 125:0
 
           gesture hold on 4 hyprctl dispatch togglespecialworkspace magic
         '';
