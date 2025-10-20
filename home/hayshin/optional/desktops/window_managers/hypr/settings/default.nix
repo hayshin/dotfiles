@@ -19,6 +19,7 @@ in
     "pin, title:^(Picture in picture)$"
     "float, title:^(Picture-in-Picture)$"
     "pin, title:^(Picture-in-Picture)$"
+    "bordercolor rgb(${config.lib.stylix.colors.base09}), fullscreenstate:* 1"
   ];
 
   exec-once = [

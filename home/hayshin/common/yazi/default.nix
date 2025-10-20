@@ -37,6 +37,7 @@
     };
     plugins = {
       folder-rules = ./folder-rules;
+      wl-clipboard = pkgs.yaziPlugins.wl-clipboard;
       full-border = pkgs.yaziPlugins.full-border;
       smart-enter = pkgs.yaziPlugins.smart-enter;
       smart-paste = pkgs.yaziPlugins.smart-paste;

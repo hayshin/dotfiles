@@ -32,6 +32,10 @@
       run = "plugin smart-filter";
     }
     {
+      on = [ "Y" ];
+      run = "plugin wl-clipboard";
+    }
+    {
       on = [ "p" ];
       run = "plugin smart-paste";
       desc = "paste into the hovered directory or CWD";
