@@ -5,7 +5,6 @@
     ./editors.nix
     ./frontend.nix
     ./git.nix
-    ./zellij.nix
   ];
   home.packages = with pkgs; [
     # python

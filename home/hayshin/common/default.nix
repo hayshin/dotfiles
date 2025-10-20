@@ -6,6 +6,7 @@
     ./shell
     ./yazi
     ./helix
+    ./zellij
   ];
 
   home = {
