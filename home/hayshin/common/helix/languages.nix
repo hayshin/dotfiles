@@ -17,6 +17,18 @@
         "pyright"
       ];
     }
+    {
+      name = "markdown";
+      auto-format = true;
+      formatter = {
+        command = "dprint";
+        args = [
+          "fmt"
+          "--stdin"
+          "md"
+        ];
+      };
+    }
   ];
   language-server = {
     # ruff-lsp = {
