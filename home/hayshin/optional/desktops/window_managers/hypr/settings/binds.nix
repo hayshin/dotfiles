@@ -82,8 +82,8 @@ in
       # "$mod, M, exec, $music"
       "$mod, escape, exec, $LOGOUT"
 
-      "$mod, E, exec, ${run} -e yazi -t yazi"
-      "$mod SHIFT, E, exec, yazi"
+      "$mod, E, exec, ${run} -e '$TERMINAL -e yazi' -t yazi"
+      "$mod SHIFT, E, exec, $TERMINAL -e yazi"
 
       # "$mod, C, exec, ${run} cursor"
       # "$mod SHIFT, C, exec, cursor"

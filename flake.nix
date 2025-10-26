@@ -19,7 +19,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # raise.url = "github:neg-serg/raise";
+    hyprsession.url = "github:joshurtree/hyprsession"; # raise.url = "github:neg-serg/raise";
   };
   outputs =
     {

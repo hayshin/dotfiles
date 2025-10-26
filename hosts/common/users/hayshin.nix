@@ -9,6 +9,7 @@
       "wheel"
       "audio"
       "input"
+      "dotool"
       "ydotool"
       "docker"
       "hdfs"

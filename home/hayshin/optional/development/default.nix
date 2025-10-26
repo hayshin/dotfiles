@@ -5,7 +5,9 @@
     ./editors.nix
     ./frontend.nix
     ./git.nix
+    ./dprint
   ];
+
   home.packages = with pkgs; [
     # python
     uv
@@ -41,5 +43,4 @@
 
     lazysql
   ];
-
 }
