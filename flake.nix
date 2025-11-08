@@ -5,7 +5,14 @@
     home-manager.url = "github:nix-community/home-manager";
 
     stylix.url = "github:danth/stylix";
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake/8c6c037d72944da0e327c4bfe1cf5ce9ff0eeba4";
+      # rev = "45b88a529bd410aeba3d28f8396901d57f8b32d4";
+      inputs = {
+        home-manager.follows = "home-manager";
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
     helix.url = "github:helix-editor/helix";
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";

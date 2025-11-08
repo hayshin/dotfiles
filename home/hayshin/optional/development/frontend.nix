@@ -4,6 +4,7 @@
     nodejs
     pnpm
     bun
+    deno
     emmet-ls
 
     nodePackages.prettier

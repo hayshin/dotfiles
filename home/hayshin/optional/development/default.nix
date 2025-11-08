@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
-    ./cloud.nix
+    # ./cloud.nix
     ./editors.nix
     ./frontend.nix
     ./git.nix

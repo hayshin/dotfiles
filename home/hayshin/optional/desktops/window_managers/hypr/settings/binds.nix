@@ -42,17 +42,19 @@ in
       screenshotsDir = picturesDir + "/screenshots";
     in
     [
-      "$mod, R, submap, resize"
+      "$mod ALT, R, submap, resize"
       "$mod, PRINT, exec, hyprpicker -a"
       ", PRINT, exec, hyprshot -m region -o ${screenshotsDir}/screenshots"
       "SHIFT, PRINT, exec, hyprshot -m output -o ${screenshotsDir}"
 
       "$mod SHIFT, P, exec, hyprpicker -a"
       "$mod, P, exec, hyprshot -m region -o ${screenshotsDir}"
-      "$mod, O, exec, pin, toggle"
+      "$mod ALT, P, exec, hyprshot -m output -o ${screenshotsDir}"
+      # "$mod, O, exec, pin, toggle"
 
       "$mod, minus, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | grep 'float:' | awk '{print $2 - 1}')"
       "$mod, equal, exec, hyprctl keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor | grep 'float:' | awk '{print $2 + 1}')"
+      "$mod, 0, exec, hyprctl keyword cursor:zoom_factor 1.0"
 
       "$mod, backslash, exec, ${swayosd} --output-volume mute-toggle"
 
@@ -66,28 +68,25 @@ in
       # ", XF86Calculator, exec, qalculate-gtk"
       ", XF86Lock, exec, $lock"
 
+      "$mod, SPACE, exec, $MENU"
+      "$mod, escape, exec, $LOGOUT"
+      "$mod, V, exec, $CLIPBOARD"
+
       "$mod, RETURN, exec, ${run} -e '$TERMINAL -e zellij attach zellij' -t zellij"
       "$mod SHIFT, RETURN, exec, $TERMINAL -e zellij"
 
-      "$mod, SPACE, exec, $MENU"
+      "$mod, B, exec, ${run} -e zen-beta -c zen-beta"
+      "$mod SHIFT, B, exec, zen-beta"
 
-      "$mod, B, exec, ${run} -e vivaldi -c vivaldi"
-      "$mod SHIFT, B, exec, vivaldi"
-
-      "$mod, W, exec, ${run} -e Telegram -c telegram"
-      "$mod SHIFT, W, exec, Telegram"
+      "$mod, D, exec, ${run} -e Telegram -c telegram"
+      "$mod SHIFT, D, exec, Telegram"
 
       "$mod, X, exec, ${run} -e 'cursor' -c cursor"
       "$mod SHIFT, X, exec, cursor"
       # "$mod, M, exec, $music"
-      "$mod, escape, exec, $LOGOUT"
 
       "$mod, E, exec, ${run} -e '$TERMINAL -e yazi' -t yazi"
       "$mod SHIFT, E, exec, $TERMINAL -e yazi"
-
-      # "$mod, C, exec, ${run} cursor"
-      # "$mod SHIFT, C, exec, cursor"
-      "$mod, V, exec, $CLIPBOARD"
 
       ", Pause, exec, playerctl play-pause"
       "$mod, slash, exec, playerctl play-pause"
@@ -97,8 +96,8 @@ in
       "$mod, Q, killactive,"
       "$mod, F, fullscreen, 1"
       "$mod SHIFT, F, fullscreen, 0"
-      "$mod SHIFT, T, togglesplit, "
-      "$mod, T, togglefloating, "
+      "$mod SHIFT, H, togglesplit, "
+      "$mod, H, togglefloating, "
 
       "$mod, left, movefocus, l"
       "$mod, right, movefocus, r"
@@ -125,8 +124,8 @@ in
       "$mod SHIFT, O, ${movetoworkspace}, r+1"
       "$mod SHIFT, U, ${movetoworkspace}, r-1"
 
-      "$mod, S, togglespecialworkspace, magic"
-      "$mod SHIFT, S, movetoworkspace, special:magic"
+      # "$mod, S, togglespecialworkspace, magic"
+      # "$mod SHIFT, S, movetoworkspace, special:magic"
 
       "$mod, mouse_down, ${workspace}, e+1"
       "$mod, mouse_up, ${workspace}, e-1"

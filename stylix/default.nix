@@ -21,7 +21,12 @@ in
       name = "Bibata-Modern-Ice";
       size = 24;
     };
-
+    targets = {
+      zen-browser.enable = false;
+      firefox.enable = false;
+      # zen-browser.profileNames = [ "default" ];
+      # firefox.profileNames = [ "Default" ];
+    };
     fonts = {
       sizes = {
         applications = 14;

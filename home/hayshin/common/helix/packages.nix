@@ -21,6 +21,7 @@ with pkgs;
 
   # docker-langserver
   docker-compose-language-service
+  kdlfmt
   # ruff
   # ruff-lsp
   # pyright

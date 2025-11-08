@@ -5,11 +5,12 @@ in
 {
   xdg = {
     enable = true;
+    configFile."mimeapps.list".force = true;
     desktopEntries = {
       browser = {
         name = "browser";
         genericName = "Browser selector";
-        exec = "vivaldi";
+        exec = "zen-beta";
         type = "Application";
         terminal = false;
         categories = [
@@ -27,7 +28,7 @@ in
       editor = {
         name = "editor";
         genericName = "Editor selector";
-        exec = "zeditor";
+        exec = "cursor";
         type = "Application";
         terminal = false;
       };
@@ -45,13 +46,21 @@ in
         "text/plain" = "editor.desktop";
         "text/markdown" = "editor.desktop";
         "text/html" = "browser.desktop";
+
         "x-scheme-handler/http" = "browser.desktop";
         "x-scheme-handler/https" = "browser.desktop";
         "x-scheme-handler/about" = "browser.desktop";
         "x-scheme-handler/unknown" = "browser.desktop";
+        "x-scheme-handler/mailto" = "browser.desktop";
+        "x-scheme-handler/chrome" = "browser.desktop";
+        "x-scheme-handler/tg" = "org.telegram.desktop.desktop";
 
-        "x-scheme-handler/tg" = [ "org.telegram.desktop.desktop " ];
-
+        "application/x-extension-shtml" = "browser.desktop";
+        "application/x-extension-xhtml" = "browser.desktop";
+        "application/x-extension-html" = "browser.desktop";
+        "application/x-extension-xht" = "browser.desktop";
+        "application/x-extension-htm" = "browser.desktop";
+        "application/xhtml+xml" = "browser.desktop";
         "application/pdf" = "browser.desktop";
         "application/octet-stream" = "browser.desktop";
 

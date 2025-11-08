@@ -1,11 +1,12 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
   imports = [
-    inputs.zen-browser.homeModules.beta
+    ./zen-browser.nix
   ];
 
   home.packages = with pkgs; [
     google-chrome
+    firefox-devedition
     vivaldi
   ];
 
@@ -15,11 +16,4 @@
   # programs.qutebrowser = {
   #   enable = true;
   # };
-  programs.zen-browser = {
-    enable = true;
-    policies = {
-      DisableAppUpdate = true;
-      DisableTelemetry = true;
-    };
-  };
 }
