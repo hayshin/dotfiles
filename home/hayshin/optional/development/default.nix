@@ -40,6 +40,8 @@
     # databases
     sqlite
     postgresql
+    mongosh
+    mongodb-compass
 
     lazysql
   ];
