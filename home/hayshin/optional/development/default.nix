@@ -2,7 +2,6 @@
 {
   imports = [
     # ./cloud.nix
-    ./editors.nix
     ./frontend.nix
     ./git.nix
     ./dprint
