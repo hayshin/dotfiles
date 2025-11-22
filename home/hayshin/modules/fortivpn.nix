@@ -3,18 +3,31 @@
   ...
 }:
 
-pkgs.writeShellScriptBin "vpn" ''
-  #!/bin/bash
+pkgs.writeShellApplication {
+  name = "vpn";
 
-  if [ -z "$1" ]; then
-      read -p "Введите OTP-код аутенфикатора: " OTP_CODE
-  else
-      OTP_CODE="$1"
-  fi
+  runtimeInputs = [
+    pkgs.openfortivpn
+    pkgs.sudo
+    pkgs.coreutils
+    pkgs.cotp
+  ];
 
-  read -r PASSWORD < /home/hayshin/.secrets/choco/password.txt
+  text = ''
+    #!/bin/bash
+    export LANG=en_US.UTF-8
+    export LC_ALL=en_US.UTF-8
 
-  VPN_PASSWORD="''${PASSWORD}''${OTP_CODE}"
+    OTP_CODE="''${1-}"
 
-  sudo openfortivpn -p "$VPN_PASSWORD"
-''
+    if [ -z "$OTP_CODE" ]; then
+        read -r -p "Введите OTP-код аутенфикатора: " OTP_CODE
+    fi
+
+    read -r PASSWORD < /home/hayshin/.secrets/choco/password.txt
+
+    VPN_PASSWORD="''${PASSWORD}''${OTP_CODE}"
+
+    sudo openfortivpn -p "$VPN_PASSWORD"
+  '';
+}
