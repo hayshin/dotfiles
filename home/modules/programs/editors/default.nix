@@ -17,7 +17,25 @@ in
     };
   };
 
+  
+
   config = {
+    xdg.desktopEntries = {
+      editor = {
+        name = "editor";
+        genericName = "Editor selector";
+        exec = cfg.default;
+        type = "Application";
+        terminal = false;
+      };
+    };
+    xdg.mimeApps = {
+      enable = true;
+      defaultApplications = {
+          "text/plain" = "editor.desktop";
+          "text/markdown" = "editor.desktop";
+      };
+    };
     editorconfig = {
       enable = true;
       settings = {

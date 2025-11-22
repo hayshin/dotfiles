@@ -8,6 +8,8 @@
 
   modules.programs.browsers = {
     zen.enable = true;
+    firefox.enable = true;
+    chrome.enable = true;
     default = "zen";
   };
 

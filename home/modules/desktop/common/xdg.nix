@@ -8,13 +8,6 @@ in
     configFile."mimeapps.list".force = true;
     desktopEntries = {
       # Telegram Desktop not opens helix editor because it terminal
-      editor = {
-        name = "editor";
-        genericName = "Editor selector";
-        exec = "cursor";
-        type = "Application";
-        terminal = false;
-      };
       image = {
         name = "image";
         genericName = "Image selector";
@@ -26,9 +19,6 @@ in
     mimeApps = {
       enable = true;
       defaultApplications = {
-        "text/plain" = "editor.desktop";
-        "text/markdown" = "editor.desktop";
-
         "x-scheme-handler/tg" = "org.telegram.desktop.desktop";
 
         "image/jpeg" = "image.desktop";
