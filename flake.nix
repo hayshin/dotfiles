@@ -14,18 +14,11 @@
       };
     };
     helix.url = "github:helix-editor/helix";
-    nix-minecraft.url = "github:Infinidoge/nix-minecraft";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     sops-nix.url = "github:Mic92/sops-nix";
 
     hyprrun.url = "github:hayshin/hyprrun";
     caelestia-shell.url = "github:caelestia-dots/shell";
-
-    hyprland-virtual-desktops = {
-      url = "github:levnikmyskin/hyprland-virtual-desktops";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     hyprsession.url = "github:joshurtree/hyprsession"; # raise.url = "github:neg-serg/raise";
   };
   outputs =
@@ -33,11 +26,7 @@
       nixpkgs,
       stylix,
       home-manager,
-      zen-browser,
-      helix,
       sops-nix,
-      nixos-hardware,
-      hyprland-virtual-desktops,
       ...
     }@inputs:
     let
@@ -53,20 +42,6 @@
     {
       # "hayshin" - system hostname
       nixosConfigurations = {
-        iners = nixpkgs.lib.nixosSystem {
-          inherit system;
-          specialArgs = {
-            inherit inputs;
-            inherit rootPath;
-          };
-          modules = [
-            ./hosts/iners.nix
-            { nixpkgs.overlays = [ overlay ]; }
-            stylix.nixosModules.stylix
-            sops-nix.nixosModules.sops
-            nixos-hardware.nixosModules.asus-fx506hm
-          ];
-        };
         matte = nixpkgs.lib.nixosSystem {
           inherit system;
           specialArgs = {
@@ -95,17 +70,6 @@
 
       # "hayshin" - username
       homeConfigurations = {
-        "hayshin@iners" = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          modules = [
-            ./home/hayshin/iners.nix
-            stylix.homeManagerModules.stylix
-          ];
-          extraSpecialArgs = {
-            inherit inputs;
-            inherit rootPath;
-          };
-        };
         "hayshin@matte" = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
