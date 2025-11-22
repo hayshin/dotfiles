@@ -1,6 +1,0 @@
-{ rootPath, ... }:
-{
-  imports = [
-    (rootPath + /stylix)
-  ];
-}

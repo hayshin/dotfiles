@@ -1,15 +1,15 @@
 { pkgs, rootPath, ... }:
 {
   imports = [
-    ./hardware/matte.nix
+    ./hardware/iners.nix
     ./modules
   ];
 
   modules = {
     hardware = {
+      # asus.enable = true; # Asus module deleted
       audio.enable = true;
       bluetooth.enable = true;
-      # asus.enable = false; # Enable if this is an ASUS laptop
     };
     desktop = {
       hyprland.enable = true;
@@ -24,7 +24,7 @@
   };
 
   networking = {
-    hostName = "matte";
+    hostName = "iners";
     networkmanager.enable = true;
     firewall.enable = false;
   };

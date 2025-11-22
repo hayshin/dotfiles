@@ -1,8 +1,8 @@
 {
   imports = [
+    ./hadoop.nix
     ./ollama.nix
-    # ./steam.nix
     ./ssh.nix
-    # ./hadoop.nix
+    ./steam.nix
   ];
 }

@@ -14,6 +14,7 @@
       };
     };
     helix.url = "github:helix-editor/helix";
+    nix-minecraft.url = "github:Infinidoge/nix-minecraft";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     sops-nix.url = "github:Mic92/sops-nix";
 
@@ -27,6 +28,7 @@
       stylix,
       home-manager,
       sops-nix,
+      nix-minecraft,
       ...
     }@inputs:
     let
