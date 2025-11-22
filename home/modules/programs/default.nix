@@ -1,7 +1,6 @@
 {
   imports = [
-    ./browsers.nix
+    ./browsers
     ./terminals.nix
-    ./zen-browser.nix
   ];
 }

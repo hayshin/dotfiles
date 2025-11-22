@@ -28,6 +28,10 @@ let
   defaultBrowser = browserConfigs.${cfg.default};
 in
 {
+  imports = [
+    ./zen.nix
+  ];
+
   options.modules.programs.browsers = {
     firefox.enable = lib.mkEnableOption "Firefox Developer Edition";
     chrome.enable = lib.mkEnableOption "Google Chrome";
