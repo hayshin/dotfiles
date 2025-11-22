@@ -65,15 +65,45 @@ in
     home.shellAliases = {
       browser = defaultBrowser.cmd;
     };
-
+    xdg.desktopEntries = {
+      browser = {
+        name = "browser";
+        genericName = "Browser selector";
+        exec = defaultBrowser.cmd;
+        type = "Application";
+        terminal = false;
+        categories = [
+          "Application"
+          "Network"
+          "WebBrowser"
+        ];
+        mimeType = [
+          "text/html"
+          "text/xml"
+          "application/pdf"
+        ];
+      };
+    };
     xdg.mimeApps = {
       enable = true;
       defaultApplications = {
-        "text/html" = "${defaultBrowser.cmd}.desktop";
-        "x-scheme-handler/http" = "${defaultBrowser.cmd}.desktop";
-        "x-scheme-handler/https" = "${defaultBrowser.cmd}.desktop";
-        "x-scheme-handler/about" = "${defaultBrowser.cmd}.desktop";
-        "x-scheme-handler/unknown" = "${defaultBrowser.cmd}.desktop";
+        "text/html" = "browser.desktop";
+        
+        "x-scheme-handler/http" = "browser.desktop";
+        "x-scheme-handler/https" = "browser.desktop";
+        "x-scheme-handler/about" = "browser.desktop";
+        "x-scheme-handler/unknown" = "browser.desktop";
+        "x-scheme-handler/mailto" = "browser.desktop";
+        "x-scheme-handler/chrome" = "browser.desktop";
+
+         "application/x-extension-shtml" = "browser.desktop";
+        "application/x-extension-xhtml" = "browser.desktop";
+        "application/x-extension-html" = "browser.desktop";
+        "application/x-extension-xht" = "browser.desktop";
+        "application/x-extension-htm" = "browser.desktop";
+        "application/xhtml+xml" = "browser.desktop";
+        "application/pdf" = "browser.desktop";
+        "application/octet-stream" = "browser.desktop";
       };
     };
   };
