@@ -15,7 +15,10 @@
       after = [ "writeBoundary" ];
       before = [ ];
       data = ''
-        install -m 0640 "$(readlink ${configPath})" ${configPath}
+        if [ -L "${configPath}" ]; then
+          realPath=$(readlink "${configPath}")
+          install -m 0640 "$realPath" "${configPath}"
+        fi
       '';
     };
 

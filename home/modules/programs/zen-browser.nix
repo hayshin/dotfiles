@@ -7,7 +7,7 @@ in
     inputs.zen-browser.homeModules.beta
   ];
 
-  config = lib.mkIf cfg.enable {
+  config = lib.mkIf cfg.zen.enable {
     programs.zen-browser = {
       enable = true;
       profiles.default = {

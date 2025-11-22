@@ -6,6 +6,8 @@ let
   workspace = "split:workspace";
   # movetoworkspace = "movetodesk";
   movetoworkspace = "split:movetoworkspace";
+
+  browser = config.modules.programs.browsers.defaultBrowserConfig;
 in
 {
 
@@ -75,8 +77,8 @@ in
       "$mod, RETURN, exec, ${run} -e '$TERMINAL -e zellij attach zellij' -t zellij"
       "$mod SHIFT, RETURN, exec, $TERMINAL -e zellij"
 
-      "$mod, B, exec, ${run} -e zen-beta -c zen-beta"
-      "$mod SHIFT, B, exec, zen-beta"
+      "$mod, B, exec, ${run} -e ${browser.cmd} -c ${browser.class}"
+      "$mod SHIFT, B, exec, ${browser.cmd}"
 
       "$mod, D, exec, ${run} -e Telegram -c telegram"
       "$mod SHIFT, D, exec, Telegram"

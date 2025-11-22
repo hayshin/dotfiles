@@ -6,7 +6,11 @@
     ./optional
   ];
 
-  modules.programs.browsers.enable = true;
+  modules.programs.browsers = {
+    zen.enable = true;
+    default = "zen";
+  };
+
   modules.programs.terminals.enable = true;
   modules.desktop.hyprland.enable = true;
 
