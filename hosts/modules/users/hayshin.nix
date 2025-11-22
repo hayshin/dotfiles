@@ -3,7 +3,7 @@
   users.users.hayshin = {
     shell = pkgs.nushell;
     isNormalUser = true;
-    description = "main user of my system";
+    description = "main user of system";
     extraGroups = [
       "networkmanager"
       "wheel"
