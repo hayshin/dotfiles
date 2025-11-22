@@ -14,9 +14,9 @@ in
   };
 
   imports = [
-    ../../../../home/hayshin/optional/desktops/window_managers/common
-    ../../../../home/hayshin/optional/desktops/window_managers/wayland
-    ../../../../home/hayshin/optional/desktops/window_managers/optional
+    ../common
+    ../wayland
+    ../addons
     ./idle.nix
     ./paper.nix
     ./lock.nix

@@ -4,7 +4,6 @@
     ./office.nix
     ./media.nix
     ./development
-    ./desktops
   ];
   home.packages = with pkgs; [
     discord
