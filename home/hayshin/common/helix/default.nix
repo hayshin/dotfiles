@@ -2,7 +2,7 @@
 {
   programs.helix = {
     enable = true;
-    defaultEditor = true;
+    defaultEditor = false; # Handled by modules.programs.editors
     package = inputs.helix.packages.${pkgs.system}.default;
     extraPackages = import ./packages.nix { pkgs = pkgs; };
     languages = import ./languages.nix;

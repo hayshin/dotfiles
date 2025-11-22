@@ -17,9 +17,16 @@ in
     };
   };
 
-  
 
   config = {
+    home.sessionVariables = {
+      EDITOR = cfg.default;
+    };
+
+    home.shellAliases = {
+      editor = cfg.default;
+    };
+
     xdg.desktopEntries = {
       editor = {
         name = "editor";
@@ -52,4 +59,3 @@ in
     };
   };
 }
-

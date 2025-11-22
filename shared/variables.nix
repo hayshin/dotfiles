@@ -4,9 +4,9 @@
   NIX = "$HOME/nix";
   TERMINAL = "kitty";
   FILE_MANAGER = "yazi";
-  EDITOR = "hx";
+  # EDITOR = "hx"; # Managed by modules.programs.editors
   MENU = "fuzzel";
   LOGOUT = "wlogout -b 4 -T 300 -B 300 -p layer-shell -s";
-  BROWSER = "zen-beta";
+  # BROWSER = "zen-beta"; # Managed by modules.programs.browsers
   CLIPBOARD = "cliphist list | $MENU --dmenu | cliphist decode | wl-copy";
 }
