@@ -1,8 +1,6 @@
 { pkgs, ... }:
 {
   imports = [
-    ./browsers.nix
-    ./terminals.nix
     ./office.nix
     ./media.nix
     ./development

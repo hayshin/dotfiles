@@ -42,7 +42,12 @@
     }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      overlay = import ./pkgs;
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [ overlay ];
+        config.allowUnfree = true;
+      };
       rootPath = ./.;
     in
     {
@@ -56,6 +61,7 @@
           };
           modules = [
             ./hosts/iners.nix
+            { nixpkgs.overlays = [ overlay ]; }
             stylix.nixosModules.stylix
             sops-nix.nixosModules.sops
             nixos-hardware.nixosModules.asus-fx506hm
@@ -69,6 +75,7 @@
           };
           modules = [
             ./hosts/matte.nix
+            { nixpkgs.overlays = [ overlay ]; }
             stylix.nixosModules.stylix
             sops-nix.nixosModules.sops
           ];
@@ -80,6 +87,7 @@
           };
           modules = [
             ./hosts/nanus.nix
+            { nixpkgs.overlays = [ overlay ]; }
             stylix.nixosModules.stylix
           ];
         };
