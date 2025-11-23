@@ -17,7 +17,8 @@
     vscode.enable = true;
     zed.enable = true;
     cursor.enable = true;
-    default = "cursor";
+    # hx.enable = true;
+    default = "hx";
   };
 
   modules.programs.terminals.enable = true;

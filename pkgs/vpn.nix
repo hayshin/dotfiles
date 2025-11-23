@@ -8,8 +8,6 @@ pkgs.writeShellApplication {
 
   runtimeInputs = [
     pkgs.openfortivpn
-    pkgs.sudo
-    pkgs.coreutils
     pkgs.cotp
   ];
 

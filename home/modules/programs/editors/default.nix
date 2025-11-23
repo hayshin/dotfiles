@@ -11,8 +11,8 @@ in
 
   options.modules.programs.editors = {
     default = lib.mkOption {
-      type = lib.types.enum [ "vscode" "zed" "cursor" "helix" ];
-      default = "cursor";
+      type = lib.types.enum [ "vscode" "zed" "cursor" "hx" ];
+      default = "hx";
       description = "Default system editor";
     };
   };
