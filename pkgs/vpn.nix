@@ -22,10 +22,6 @@ pkgs.writeShellApplication {
         read -r -p "Введите OTP-код аутенфикатора: " OTP_CODE
     fi
 
-    read -r PASSWORD < /home/hayshin/.secrets/choco/password.txt
-
-    VPN_PASSWORD="''${PASSWORD}''${OTP_CODE}"
-
-    sudo openfortivpn -p "$VPN_PASSWORD"
+    sudo openfortivpn -c /run/secrets/choco_vpn
   '';
 }

@@ -10,5 +10,12 @@
     age = {
       keyFile = "/home/hayshin/.config/sops/age/keys.txt";
     };
+
+    secrets = {
+      choco_vpn = {
+        format = "binary";
+        sopsFile = ../../../secrets/choco_vpn;
+      };
+    };
   };
 }
