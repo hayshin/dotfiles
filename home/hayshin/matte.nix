@@ -23,6 +23,4 @@
 
   modules.programs.terminals.enable = true;
   modules.desktop.hyprland.enable = true;
-
-  home.packages = [ pkgs.vpn ];
 }

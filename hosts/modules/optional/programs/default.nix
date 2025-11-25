@@ -4,5 +4,6 @@
     ./ollama.nix
     ./ssh.nix
     ./steam.nix
+    ./choco-vpn.nix
   ];
 }

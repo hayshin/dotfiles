@@ -5,6 +5,8 @@
     ./modules
   ];
 
+  services.choco-vpn.enable = true;
+
   modules = {
     hardware = {
       audio.enable = true;
@@ -31,7 +33,7 @@
 
   environment = {
     sessionVariables = import (rootPath + /shared/variables.nix);
-    systemPackages = [ pkgs.cloudflared ];
+    systemPackages = [ pkgs.cloudflared pkgs.choco-vpn ];
   };
 
   system.stateVersion = "24.05";

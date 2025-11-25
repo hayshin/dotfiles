@@ -7,7 +7,7 @@
         users = [ "hayshin" ];
         commands = [
           {
-            command = "${pkgs.vpn}/bin/vpn";
+            command = "${pkgs.choco-vpn}/bin/choco-vpn";
             options = [
               "NOPASSWD"
             ];

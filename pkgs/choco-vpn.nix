@@ -4,7 +4,7 @@
 }:
 
 pkgs.writeShellApplication {
-  name = "vpn";
+  name = "choco-vpn";
 
   runtimeInputs = [
     pkgs.openfortivpn
