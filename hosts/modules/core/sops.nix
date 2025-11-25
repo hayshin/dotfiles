@@ -1,10 +1,13 @@
 # to keep secrets privately to others
 { inputs, pkgs, ... }:
+let
+  secretsDir = ../../../secrets;
+in
 {
   imports = [ inputs.sops-nix.nixosModules.sops ];
   environment.systemPackages = [ pkgs.sops ];
   sops = {
-    defaultSopsFile = ../../secrets.yaml;
+    defaultSopsFile = secretsDir + "/secrets.yaml";
     defaultSopsFormat = "yaml";
     validateSopsFiles = false;
     age = {
@@ -14,7 +17,7 @@
     secrets = {
       choco_vpn = {
         format = "binary";
-        sopsFile = ../../../secrets/choco_vpn;
+        sopsFile = secretsDir + "/choco_vpn";
       };
     };
   };
