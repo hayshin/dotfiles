@@ -19,6 +19,8 @@ in
         format = "binary";
         sopsFile = secretsDir + "/choco_vpn";
       };
+      choco_otp = { };
+      choco_password = { };
     };
   };
 }

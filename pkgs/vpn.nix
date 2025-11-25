@@ -8,7 +8,7 @@ pkgs.writeShellApplication {
 
   runtimeInputs = [
     pkgs.openfortivpn
-    pkgs.cotp
+    pkgs.totp-cli
   ];
 
   text = ''
@@ -16,12 +16,9 @@ pkgs.writeShellApplication {
     export LANG=en_US.UTF-8
     export LC_ALL=en_US.UTF-8
 
-    OTP_CODE="''${1-}"
-
-    if [ -z "$OTP_CODE" ]; then
-        read -r -p "Введите OTP-код аутенфикатора: " OTP_CODE
-    fi
-
-    sudo openfortivpn -c /run/secrets/choco_vpn
+    OTP_CODE=$(sudo cat /run/secrets/choco_otp | totp-cli instant --algorithm sha256)
+    PASSWORD=$(sudo cat /run/secrets/choco_password)
+    VPN_PASSWORD="$PASSWORD''${OTP_CODE}"
+    sudo openfortivpn -c /run/secrets/choco_vpn -p "$VPN_PASSWORD"
   '';
 }
