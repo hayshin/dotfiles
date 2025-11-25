@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   security.sudo = {
     enable = true;
@@ -6,7 +7,7 @@
         users = [ "hayshin" ];
         commands = [
           {
-            command = "/home/hayshin/.nix-profile/bin/vpn";
+            command = "${pkgs.vpn}/bin/vpn";
             options = [
               "NOPASSWD"
             ];
