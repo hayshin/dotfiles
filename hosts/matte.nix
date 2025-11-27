@@ -5,7 +5,7 @@
     ./modules
   ];
 
-  services.choco-vpn.enable = false;
+  services.choco-vpn.enable = true;
 
   modules = {
     hardware = {
