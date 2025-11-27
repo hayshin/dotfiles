@@ -6,18 +6,16 @@
     #   IdentityFile ~/.ssh/github
     #   AddKeysToAgent yes
     # '';
-    matchBlocks."github" = {
+    matchBlocks."github.com" = {
       addKeysToAgent = "yes";
       forwardAgent = true;
-      hostname = "github.com";
       user = "git";
       identitiesOnly = true;
       identityFile = "~/.ssh/github";
     };
-    matchBlocks."gitlab" = {
+    matchBlocks."git.chocodev.kz" = {
       addKeysToAgent = "yes";
       forwardAgent = true;
-      hostname = "git.chocodev.kz";
       user = "git";
       identitiesOnly = true;
       identityFile = "~/.ssh/gitlab";
