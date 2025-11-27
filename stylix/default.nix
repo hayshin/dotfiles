@@ -22,10 +22,8 @@ in
       size = 24;
     };
     targets = {
-      #zen-browser.enable = false;
-      #firefox.enable = false;
-      # zen-browser.profileNames = [ "default" ];
-      # firefox.profileNames = [ "Default" ];
+      zen-browser.enable = false;
+      firefox.enable = false; # disable if you don't use Firefox
     };
     fonts = {
       sizes = {

@@ -2,18 +2,17 @@
   description = "System configuration of hayshin";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     stylix = {
-      url = "github:danth/stylix";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        home-manager.follows = "home-manager";
-      };
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
+
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake/8c6c037d72944da0e327c4bfe1cf5ce9ff0eeba4";
       inputs = {
@@ -91,7 +90,7 @@
           inherit pkgs;
           modules = [
             ./home/hayshin/matte.nix
-            stylix.homeManagerModules.stylix
+            stylix.homeModules.stylix
           ];
           extraSpecialArgs = {
             inherit inputs;
@@ -102,7 +101,7 @@
           inherit pkgs;
           modules = [
             ./home/hayshin/nanus.nix
-            stylix.homeManagerModules.stylix
+            stylix.homeModules.stylix
           ];
           extraSpecialArgs = {
             inherit inputs;
