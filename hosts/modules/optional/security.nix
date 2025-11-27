@@ -16,4 +16,13 @@
       }
     ];
   };
+  security = {
+    # pam = {
+    #   services = {
+    #     gdm.enableGnomeKeyring = true;
+    #   };
+    # };
+    polkit.enable = true;
+  };
+  environment.systemPackages = [ pkgs.openssl ];
 }
