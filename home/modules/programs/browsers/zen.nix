@@ -1,4 +1,9 @@
-{ config, inputs, lib, ... }:
+{
+  config,
+  inputs,
+  lib,
+  ...
+}:
 let
   cfg = config.modules.programs.browsers;
 in
@@ -17,7 +22,7 @@ in
           "zen.urlbar.behavior" = "float";
         };
 
-        containersForce = true;
+        containersForce = false;
         containers = {
           Personal = {
             color = "orange";
@@ -36,7 +41,7 @@ in
           };
         };
 
-        spacesForce = true;
+        spacesForce = false;
         spaces =
           let
             containers = config.programs.zen-browser.profiles.default.containers;
