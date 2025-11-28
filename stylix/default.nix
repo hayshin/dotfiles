@@ -8,6 +8,7 @@ in
     autoEnable = true;
     image = wallpaper;
     polarity = "dark";
+    enableReleaseChecks = false;
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
     # opacity = {
@@ -20,10 +21,6 @@ in
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
       size = 24;
-    };
-    targets = {
-      zen-browser.enable = false;
-      firefox.enable = false; # disable if you don't use Firefox
     };
     fonts = {
       sizes = {

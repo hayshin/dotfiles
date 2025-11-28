@@ -61,6 +61,8 @@ in
     ];
 
     programs.firefox.enable = cfg.firefox.enable;
+    stylix.targets.firefox.enable = false;
+
 
     home.sessionVariables = {
       BROWSER = defaultBrowser.cmd;

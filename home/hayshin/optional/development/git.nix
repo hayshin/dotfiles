@@ -10,7 +10,7 @@
     };
     includes = [
       {
-        condition = "gitdir:~/dev/gentest";
+        condition = "gitdir:~/dev/gentest/";
         contents = {
           user.name = "Dauren Baimurza";
           user.email = "baimurza.d@idoctor.kz";
@@ -18,7 +18,7 @@
         };
       }
       {
-        condition = "gitdir:~/dev/idoctor";
+        condition = "gitdir:~/dev/idoctor/";
         contents = {
           user.email = "baimurza.d@idoctor.kz";
           user.name = "Dauren Baimurza";

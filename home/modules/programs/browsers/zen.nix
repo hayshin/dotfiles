@@ -13,6 +13,7 @@ in
   ];
 
   config = lib.mkIf cfg.zen.enable {
+    stylix.targets.zen-browser.enable = false;
     programs.zen-browser = {
       enable = true;
       profiles.default = {
