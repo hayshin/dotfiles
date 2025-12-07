@@ -19,6 +19,7 @@ in
     ../addons
     ./idle.nix
     ./paper.nix
+    ./caelestia.nix
     ./lock.nix
   ];
 

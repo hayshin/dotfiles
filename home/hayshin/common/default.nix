@@ -2,7 +2,6 @@
 {
   imports = [
     ./stylix.nix
-    ./caelestia.nix
     ./shell
     ./yazi
     ./helix

@@ -1,4 +1,9 @@
-{ pkgs, rootPath, ... }:
+{
+  pkgs,
+  inputs,
+  rootPath,
+  ...
+}:
 {
   imports = [
     ./hardware/matte.nix
@@ -25,6 +30,7 @@
     };
   };
 
+  nixpkgs.overlays = [ inputs.polymc.overlay ];
   networking = {
     hostName = "matte";
     networkmanager.enable = true;
@@ -36,6 +42,7 @@
     systemPackages = [
       pkgs.cloudflared
       pkgs.choco-vpn
+      pkgs.polymc
     ];
   };
 

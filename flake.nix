@@ -34,6 +34,7 @@
       url = "github:hayshin/hyprrun";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    polymc.url = "github:PolyMC/PolyMC";
     caelestia-shell.url = "github:caelestia-dots/shell";
     hyprsession.url = "github:joshurtree/hyprsession";
   };
@@ -43,6 +44,8 @@
       stylix,
       home-manager,
       sops-nix,
+      caelestia-shell,
+      zen-browser,
       ...
     }@inputs:
     let
