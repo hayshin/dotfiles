@@ -74,6 +74,19 @@
             sops-nix.nixosModules.sops
           ];
         };
+        wujie = nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = {
+            inherit inputs;
+            inherit rootPath;
+          };
+          modules = [
+            ./hosts/wujie.nix
+            { nixpkgs.overlays = [ overlay ]; }
+            stylix.nixosModules.stylix
+            sops-nix.nixosModules.sops
+          ];
+        };
         nanus = nixpkgs.lib.nixosSystem {
           inherit system;
           specialArgs = {
@@ -93,6 +106,17 @@
           inherit pkgs;
           modules = [
             ./home/hayshin/matte.nix
+            stylix.homeModules.stylix
+          ];
+          extraSpecialArgs = {
+            inherit inputs;
+            inherit rootPath;
+          };
+        };
+        "hayshin@wujie" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [
+            ./home/hayshin/wujie.nix
             stylix.homeModules.stylix
           ];
           extraSpecialArgs = {

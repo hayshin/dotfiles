@@ -16,14 +16,15 @@
       # substituters of cache
       substituters = [
         # high priority since it's almost always used
-        "https://cache.nixos.org"
-        # "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+        "https://cache.nixos.kz"
         "https://nix-community.cachix.org"
         "https://nix-gaming.cachix.org"
         "https://anyrun.cachix.org"
         "https://helix.cachix.org"
         "https://hyprland.cachix.org"
         "https://yazi.cachix.org"
+        "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+        "https://cache.nixos.org"
       ];
 
       trusted-public-keys = [

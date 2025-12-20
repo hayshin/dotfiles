@@ -29,10 +29,37 @@ in
     "wl-paste --type image --watch cliphist store" # Stores only image data
   ];
 
-  monitor = [
-    "eDP-1, 1920x1200@60, 0x0, 1.20, cm, srgb"
-    "desc:AOC 24B3HA2 AUFQ99A006092, 1920x1080@60, 1600x0, 1, cm, srgb"
-    ",preferred,auto,1,mirror,eDP-1"
+  # monitor = [
+  # "eDP-1, 2800x1800@120, 0x0, 1.20, cm, srgb"
+  # "desc:AOC 24B3HA2 AUFQ99A006092, 1920x1080@60, 1600x0, 1, cm, srgb"
+  # ",preferred,auto,1,mirror,eDP-1"
+  # ",preferred,auto,1"
+  # ];
+  monitorv2 = [
+    {
+      output = "desc:Tianma Microelectronics Ltd. TL140ADXP24-0";
+      mode = "2880x1800@120";
+      position = "0x0";
+      scale = 1.5;
+    }
+    {
+      output = "desc:AOC 24B3HA2 AUFQ99A006092";
+      mode = "1920x1080@60";
+      position = "1920x0";
+      scale = 1;
+    }
+    {
+      output = "desc:BOE 0x0A74";
+      mode = "1920x1200@60";
+      position = "0x0";
+      scale = 1.2;
+    }
+    {
+      output = "";
+      mode = "preferred";
+      position = "auto";
+      scale = 1;
+    }
   ];
 
   dwindle = {
