@@ -1,6 +1,7 @@
 {
   config,
   inputs,
+  zen-browser,
   lib,
   ...
 }:
@@ -9,7 +10,7 @@ let
 in
 {
   imports = [
-    inputs.zen-browser.homeModules.beta
+    zen-browser.homeModules.beta
   ];
 
   config = lib.mkIf cfg.zen.enable {

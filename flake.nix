@@ -46,6 +46,8 @@
       sops-nix,
       caelestia-shell,
       zen-browser,
+      hyprsession,
+      hyprrun,
       ...
     }@inputs:
     let
@@ -65,6 +67,13 @@
           inherit system;
           specialArgs = {
             inherit inputs;
+            inherit hyprsession;
+            inherit hyprrun;
+            inherit caelestia-shell;
+            inherit zen-browser;
+            inherit helix;
+            inherit sops-nix;
+            inherit polymc;
             inherit rootPath;
           };
           modules = [
@@ -78,6 +87,13 @@
           inherit system;
           specialArgs = {
             inherit inputs;
+            inherit hyprsession;
+            inherit hyprrun;
+            inherit caelestia-shell;
+            inherit zen-browser;
+            inherit helix;
+            inherit sops-nix;
+            inherit polymc;
             inherit rootPath;
           };
           modules = [
@@ -91,6 +107,14 @@
           inherit system;
           specialArgs = {
             inherit inputs;
+            inherit hyprsession;
+            inherit hyprrun;
+            inherit caelestia-shell;
+            inherit zen-browser;
+            inherit helix;
+            inherit sops-nix;
+            inherit polymc;
+            inherit rootPath;
           };
           modules = [
             ./hosts/nanus.nix
@@ -110,6 +134,13 @@
           ];
           extraSpecialArgs = {
             inherit inputs;
+            inherit hyprsession;
+            inherit hyprrun;
+            inherit caelestia-shell;
+            inherit zen-browser;
+            inherit helix;
+            inherit sops-nix;
+            inherit polymc;
             inherit rootPath;
           };
         };
@@ -121,6 +152,13 @@
           ];
           extraSpecialArgs = {
             inherit inputs;
+            inherit hyprsession;
+            inherit hyprrun;
+            inherit caelestia-shell;
+            inherit zen-browser;
+            inherit helix;
+            inherit sops-nix;
+            inherit polymc;
             inherit rootPath;
           };
         };
@@ -132,6 +170,13 @@
           ];
           extraSpecialArgs = {
             inherit inputs;
+            inherit hyprsession;
+            inherit hyprrun;
+            inherit caelestia-shell;
+            inherit zen-browser;
+            inherit helix;
+            inherit sops-nix;
+            inherit polymc;
             inherit rootPath;
           };
         };
@@ -139,8 +184,19 @@
           inherit pkgs;
           modules = [
             ./home/server
-            stylix.nixosModules.stylix
+            stylix.homeModules.stylix
           ];
+          extraSpecialArgs = {
+            inherit inputs;
+            inherit hyprsession;
+            inherit hyprrun;
+            inherit caelestia-shell;
+            inherit zen-browser;
+            inherit helix;
+            inherit sops-nix;
+            inherit polymc;
+            inherit rootPath;
+          };
         };
       };
     };

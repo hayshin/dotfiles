@@ -1,9 +1,9 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, helix, ... }:
 {
   programs.helix = {
     enable = true;
     defaultEditor = false; # Handled by modules.programs.editors
-    package = inputs.helix.packages.${pkgs.system}.default;
+    package = helix.packages.${pkgs.system}.default;
     extraPackages = import ./packages.nix { pkgs = pkgs; };
     languages = import ./languages.nix;
 

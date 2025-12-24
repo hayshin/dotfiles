@@ -2,6 +2,8 @@
   config,
   pkgs,
   inputs,
+  hyprrun,
+  hyprsession,
   lib,
   ...
 }:
@@ -54,8 +56,8 @@ in
     home.packages = [
       pkgs.hyprshot # screenshot
       pkgs.hyprpicker # color picker
-      inputs.hyprrun.defaultPackage.x86_64-linux
-      inputs.hyprsession.packages.x86_64-linux.hyprsession
+      hyprrun.defaultPackage.${pkgs.system}
+      hyprsession.packages.${pkgs.system}.hyprsession
     ];
   };
 }

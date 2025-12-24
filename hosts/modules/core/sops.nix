@@ -1,10 +1,10 @@
 # to keep secrets privately to others
-{ inputs, pkgs, ... }:
+{ inputs, sops-nix, pkgs, ... }:
 let
   secretsDir = ../../../secrets;
 in
 {
-  imports = [ inputs.sops-nix.nixosModules.sops ];
+  imports = [ sops-nix.nixosModules.sops ];
   environment.systemPackages = [ pkgs.sops ];
   sops = {
     defaultSopsFile = secretsDir + "/secrets.yaml";

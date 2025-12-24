@@ -74,7 +74,7 @@ in
       "$mod, escape, exec, $LOGOUT"
       "$mod, V, exec, $CLIPBOARD"
 
-      "$mod, RETURN, exec, ${run} -e '$TERMINAL -e zellij attach zellij' -t zellij"
+      "$mod, RETURN, exec, ${run} -e '$TERMINAL -e zellij a zellij' -t zellij"
       "$mod SHIFT, RETURN, exec, $TERMINAL -e zellij"
 
       "$mod, B, exec, ${run} -e ${browser.cmd} -c ${browser.class}"

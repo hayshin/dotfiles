@@ -40,7 +40,7 @@ in
       output = "desc:Tianma Microelectronics Ltd. TL140ADXP24-0";
       mode = "2880x1800@120";
       position = "0x0";
-      scale = 1.5;
+      scale = 1.8;
     }
     {
       output = "desc:AOC 24B3HA2 AUFQ99A006092";

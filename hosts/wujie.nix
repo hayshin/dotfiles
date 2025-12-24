@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  polymc,
   rootPath,
   ...
 }:
@@ -10,13 +11,30 @@
     ./modules
   ];
 
+  boot = {
+    initrd.kernelModules = [
+      "amdgpu"
+    ];
+    kernelParams = [
+      "video=eDP-1:2880x1800@120"
+    ];
+    kernelModules = [ "amdgpu" ];
+    loader.systemd-boot.consoleMode = "1"; # press r on system-boot
+    kernelPackages = pkgs.linuxKernel.packages.linux_6_17;
+  };
   services.choco-vpn.enable = true;
-
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+    extraPackages = with pkgs; [
+      rocmPackages.clr.icd # OpenCL
+      libva # VA-API
+    ];
+  };
   modules = {
     hardware = {
       audio.enable = true;
       bluetooth.enable = true;
-      # asus.enable = false; # Enable if this is an ASUS laptop
     };
     desktop = {
       hyprland.enable = true;
@@ -30,9 +48,9 @@
     };
   };
 
-  nixpkgs.overlays = [ inputs.polymc.overlay ];
+  nixpkgs.overlays = [ polymc.overlay ];
   networking = {
-    hostName = "matte";
+    hostName = "wujie";
     networkmanager.enable = true;
     firewall.enable = false;
   };

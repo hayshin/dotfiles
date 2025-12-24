@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  polymc,
   rootPath,
   ...
 }:
@@ -30,7 +31,7 @@
     };
   };
 
-  nixpkgs.overlays = [ inputs.polymc.overlay ];
+  nixpkgs.overlays = [ polymc.overlay ];
   networking = {
     hostName = "matte";
     networkmanager.enable = true;
