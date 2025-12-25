@@ -59,6 +59,7 @@ in
       hyprrun.defaultPackage.${pkgs.system}
       hyprsession.packages.${pkgs.system}.default
       pkgs.base16-schemes
+      pkgs.lock
     ];
   };
 }

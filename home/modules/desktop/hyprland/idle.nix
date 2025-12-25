@@ -2,7 +2,7 @@
 {
   config = lib.mkIf config.modules.desktop.hyprland.enable {
     services.hypridle = {
-      enable = true;
+      enable = false;
       settings = {
         general = {
           lock_cmd = "lock";

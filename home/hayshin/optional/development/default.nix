@@ -41,6 +41,7 @@
     postgresql
     mongosh
     mongodb-compass
+    mariadb.client
 
     lazysql
   ];

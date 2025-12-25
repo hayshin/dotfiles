@@ -1,171 +1,204 @@
 {
-	"show_edit_predictions": false,
-	"icon_theme": "Colored Zed Icons Theme Dark",
-	"scroll_sensitivity": 2.0,
-	"fast_scroll_sensitivity": 8.0,
-	"agent": {
-		"use_modifier_to_send": false,
-		"play_sound_when_agent_done": true,
-		"always_allow_tool_actions": true,
-		"profiles": {
-			"ask": {
-				"name": "Ask",
-				"tools": {
-					"contents": true,
-					"diagnostics": true,
-					"fetch": true,
-					"list_directory": true,
-					"now": true,
-					"find_path": true,
-					"read_file": true,
-					"open": true,
-					"grep": true,
-					"thinking": true,
-					"web_search": true
-				},
-				"enable_all_context_servers": false,
-				"context_servers": {
-					"mcp-server-context7": {
-						"tools": {
-							"resolve-library-id": true,
-							"get-library-docs": true
-						}
-					}
-				}
-			},
-			"minimal": {
-				"name": "Minimal",
-				"tools": {
-					"edit_file": false
-				},
-				"enable_all_context_servers": false,
-				"context_servers": {
-					"mcp-server-context7": {
-						"tools": {
-							"resolve-library-id": true,
-							"get-library-docs": true
-						}
-					}
-				}
-			}
-		},
-		"default_profile": "ask",
-		"model_parameters": [],
-		"default_model": {
-			"provider": "copilot_chat",
-			"model": "gpt-5-mini"
-		}
-		// "scroll_sensitivity": 2.0,
-	},
-	"helix_mode": true,
-	"vim": {
-		"use_system_clipboard": "on_yank",
-		"default_mode": "helix_normal"
-	},
-	"ui_font_size": 16,
-	"buffer_font_family": "JetBrains Mono",
-	"buffer_font_size": 17,
-	"buffer_font_weight": 400,
-	"terminal": {
-		"font_family": "JetBrains Mono",
-		"font_size": 16,
-		"font_weight": 300,
-		"line_height": "standard"
-	},
-	"hide_mouse": "on_typing_and_movement",
-	"unnecessary_code_fade": 0.3,
-	"soft_wrap": "editor_width",
-	"preferred_line_length": 80,
-	"show_wrap_guides": true,
-
-	"gutter": {
-		"line_numbers": true, // Show/hide line numbers in the gutter.
-		"runnables": false, // Show/hide runnables buttons in the gutter.
-		"breakpoints": false, // Show/hide show breakpoints in the gutter.
-		"folds": false, // Show/hide show fold buttons in the gutter.
-		"min_line_number_digits": 2 // Reserve space for N digit line numbers
-	},
-	"relative_line_numbers": true,
-	"theme": {
-		"mode": "system",
-		"light": "Gruvbox Material Helix",
-		"dark": "One Dark"
-	},
-	"diagnostics": {},
-	"tabs": {
-		"show_diagnostics": "all"
-	},
-	"format_on_save": "on",
-	"lsp": {
-		"biome": {
-			"settings": {
-				"config_path": "/home/hayshin/nix/home/hayshin/config/biome.json"
-			}
-		}
-	},
-	"languages": {
-		"Python": {
-			"language_servers": ["!pylsp", "pyright", "ruff"],
-			"format_on_save": "on",
-			"formatter": [
-				{
-					"code_actions": {
-						"source.organizeImports.ruff": true,
-						"source.fixAll.ruff": true
-					}
-				},
-				{
-					"language_server": {
-						"name": "ruff"
-					}
-				}
-			]
-		},
-		"JavaScript": {
-			"formatter": { "language_server": { "name": "biome" } },
-			"code_actions_on_format": {
-				"source.fixAll.biome": true,
-				"quickfix.biome": true,
-				"source.organizeImports.biome": true,
-				"source.addMissingImports.ts": true
-			}
-		},
-
-		"TypeScript": {
-			"formatter": { "language_server": { "name": "biome" } },
-			"code_actions_on_format": {
-				"source.fixAll.biome": true,
-				"quickfix.biome": true,
-				"source.organizeImports.biome": true,
-				"source.addMissingImports.ts": true
-			}
-		},
-
-		"TSX": {
-			"formatter": { "language_server": { "name": "biome" } },
-			"code_actions_on_format": {
-				"source.fixAll.biome": true,
-				"quickfix.biome": true,
-				"source.organizeImports.biome": true,
-				"source.addMissingImports.ts": true
-			}
-		},
-		"JSON": { "formatter": { "language_server": { "name": "biome" } } },
-		"JSONC": { "formatter": { "language_server": { "name": "biome" } } },
-		"CSS": { "formatter": { "language_server": { "name": "biome" } } },
-
-		"Svelte": {
-			"formatter": {
-				"external": {
-					"command": "prettier",
-					"arguments": ["--stdin-filepath", "{buffer_path}"]
-				}
-			},
-			"code_actions_on_format": {
-				"source.addMissingImports.ts": true,
-				"source.fixAll.eslint": true
-			},
-			"format_on_save": "on"
-		}
-	}
+  "show_edit_predictions": false,
+  "icon_theme": "Colored Zed Icons Theme Dark",
+  "scroll_sensitivity": 2.0,
+  "fast_scroll_sensitivity": 8.0,
+  "agent": {
+    "use_modifier_to_send": false,
+    "play_sound_when_agent_done": true,
+    "always_allow_tool_actions": true,
+    "profiles": {
+      "ask": {
+        "name": "Ask",
+        "tools": {
+          "contents": true,
+          "diagnostics": true,
+          "fetch": true,
+          "list_directory": true,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "open": true,
+          "grep": true,
+          "thinking": true,
+          "web_search": true
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {
+          "mcp-server-context7": {
+            "tools": {
+              "resolve-library-id": true,
+              "get-library-docs": true
+            }
+          }
+        }
+      },
+      "minimal": {
+        "name": "Minimal",
+        "tools": {
+          "edit_file": false
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {
+          "mcp-server-context7": {
+            "tools": {
+              "resolve-library-id": true,
+              "get-library-docs": true
+            }
+          }
+        }
+      }
+    },
+    "default_profile": "ask",
+    "model_parameters": [],
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini"
+    }
+    // "scroll_sensitivity": 2.0,
+  },
+  "helix_mode": true,
+  "vim": {
+    "use_system_clipboard": "on_yank",
+    "default_mode": "normal"
+  },
+  "ui_font_size": 16,
+  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_size": 17,
+  "buffer_font_weight": 400,
+  "terminal": {
+    "font_family": "JetBrains Mono",
+    "font_size": 16,
+    "font_weight": 300,
+    "line_height": "standard"
+  },
+  "hide_mouse": "on_typing_and_movement",
+  "unnecessary_code_fade": 0.3,
+  "soft_wrap": "editor_width",
+  "preferred_line_length": 80,
+  "show_wrap_guides": true,
+  "gutter": {
+    "line_numbers": true, // Show/hide line numbers in the gutter.
+    "runnables": false, // Show/hide runnables buttons in the gutter.
+    "breakpoints": false, // Show/hide show breakpoints in the gutter.
+    "folds": false, // Show/hide show fold buttons in the gutter.
+    "min_line_number_digits": 2 // Reserve space for N digit line numbers
+  },
+  "relative_line_numbers": true,
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Material Helix",
+    "dark": "One Dark"
+  },
+  "diagnostics": {},
+  "tabs": {
+    "show_diagnostics": "all"
+  },
+  "format_on_save": "on",
+  "lsp": {
+    "biome": {
+      "settings": {
+        "config_path": "/home/hayshin/nix/home/hayshin/config/biome.json"
+      }
+    }
+  },
+  "languages": {
+    "Python": {
+      "language_servers": [
+        "!pylsp",
+        "pyright",
+        "ruff"
+      ],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "code_actions": {
+            "source.organizeImports.ruff": true,
+            "source.fixAll.ruff": true
+          }
+        },
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ]
+    },
+    "JavaScript": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "quickfix.biome": true,
+        "source.organizeImports.biome": true,
+        "source.addMissingImports.ts": true
+      }
+    },
+    "TypeScript": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "quickfix.biome": true,
+        "source.organizeImports.biome": true,
+        "source.addMissingImports.ts": true
+      }
+    },
+    "TSX": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "quickfix.biome": true,
+        "source.organizeImports.biome": true,
+        "source.addMissingImports.ts": true
+      }
+    },
+    "JSON": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      }
+    },
+    "JSONC": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      }
+    },
+    "CSS": {
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      }
+    },
+    "Svelte": {
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": [
+            "--stdin-filepath",
+            "{buffer_path}"
+          ]
+        }
+      },
+      "code_actions_on_format": {
+        "source.addMissingImports.ts": true,
+        "source.fixAll.eslint": true
+      },
+      "format_on_save": "on"
+    }
+  }
 }

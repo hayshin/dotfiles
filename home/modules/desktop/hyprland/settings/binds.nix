@@ -70,7 +70,7 @@ in
       # ", XF86Calculator, exec, qalculate-gtk"
       ", XF86Lock, exec, $lock"
 
-      "$mod, SPACE, global, fuzzel"
+      "$mod, SPACE, exec, $MENU"
       "$mod, escape, exec, $LOGOUT"
       "$mod, V, exec, $CLIPBOARD"
 

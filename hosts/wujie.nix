@@ -16,7 +16,7 @@
       "amdgpu"
     ];
     kernelParams = [
-      "video=eDP-1:2880x1800@120"
+      # "video=eDP-1:2880x1800@120"
       "amdgpu.dcdebugmask=0x10"
       "amdgpu.ppfeaturemask=0xfff73fff"
     ];
