@@ -17,6 +17,8 @@
     ];
     kernelParams = [
       "video=eDP-1:2880x1800@120"
+      "amdgpu.dcdebugmask=0x10"
+      "amdgpu.ppfeaturemask=0xfff73fff"
     ];
     kernelModules = [ "amdgpu" ];
     loader.systemd-boot.consoleMode = "1"; # press r on system-boot

@@ -48,6 +48,8 @@
       zen-browser,
       hyprsession,
       hyprrun,
+      helix,
+      polymc,
       ...
     }@inputs:
     let

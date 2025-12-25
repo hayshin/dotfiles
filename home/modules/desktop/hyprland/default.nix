@@ -21,7 +21,7 @@ in
     ../addons
     ./idle.nix
     ./paper.nix
-    ./caelestia.nix
+    # ./caelestia.nix
     ./lock.nix
   ];
 
@@ -57,7 +57,8 @@ in
       pkgs.hyprshot # screenshot
       pkgs.hyprpicker # color picker
       hyprrun.defaultPackage.${pkgs.system}
-      hyprsession.packages.${pkgs.system}.hyprsession
+      hyprsession.packages.${pkgs.system}.default
+      pkgs.base16-schemes
     ];
   };
 }

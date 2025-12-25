@@ -3,6 +3,7 @@ let
   wallpaper = ./wallpaper.png;
 in
 {
+  
   stylix = {
     enable = true;
     autoEnable = true;

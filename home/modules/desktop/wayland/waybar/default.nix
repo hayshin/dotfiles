@@ -4,7 +4,7 @@ let
 in
 {
   programs.waybar = {
-    enable = false;
+    enable = true;
     settings = import ./settings.nix;
     systemd = {
       enable = true;
