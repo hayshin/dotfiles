@@ -3,8 +3,6 @@
 {
   programs.direnv = {
     enable = true;
-    # enableNushellIntegration = true;
-    # enableZshIntegration = true;
     # silent = true;
 
     config = {

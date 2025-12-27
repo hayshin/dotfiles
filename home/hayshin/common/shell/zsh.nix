@@ -19,4 +19,6 @@
     #   theme = "agnoster"; # blinks is also really nice
     # };
   };
+
+  home.shell.enableZshIntegration = true;
 }

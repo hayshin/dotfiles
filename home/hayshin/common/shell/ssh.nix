@@ -2,10 +2,6 @@
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
-    # extraConfig = ''
-    #   IdentityFile ~/.ssh/github
-    #   AddKeysToAgent yes
-    # '';
     matchBlocks."github.com" = {
       addKeysToAgent = "yes";
       forwardAgent = true;
@@ -23,6 +19,5 @@
   };
   services.ssh-agent = {
     enable = true;
-    # enableNushellntegration = true;
   };
 }
