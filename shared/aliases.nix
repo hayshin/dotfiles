@@ -14,8 +14,6 @@ let
 
   cd = baseCommand "z" {
     zz = "~/dev";
-    zzm = "~/dev/meeplix";
-    zzp = "~/dev/probent";
     zd = "~/downloads";
     zi = "~/images";
     ziw = "~/images/wallpapers";
@@ -51,9 +49,9 @@ let
     gc = "clone";
     gch = "checkout";
     gst = "status";
-    gp = "push";
     gpo = "push origin";
     gpod = "push origin dev";
+    gpos = "push origin stage";
     gpom = "push origin master";
     gg = "pull";
     ga = "add";

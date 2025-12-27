@@ -7,6 +7,7 @@ in
     ./vscode.nix
     ./zed.nix
     ./cursor.nix
+    ./helix
   ];
 
   options.modules.programs.editors = {

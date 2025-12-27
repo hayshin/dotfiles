@@ -17,7 +17,7 @@
     ];
     kernelParams = [
       # "video=eDP-1:2880x1800@120"
-      "amdgpu.dcdebugmask=0x10"
+      "amdgpu.dcdebugmask=0x10" # helps with amdgpu crashes
       # "amdgpu.ppfeaturemask=0xfff73fff" # screen doesn't go to sleep
     ];
     kernelModules = [ "amdgpu" ];
@@ -51,6 +51,7 @@
   };
 
   nixpkgs.overlays = [ polymc.overlay ];
+
   networking = {
     hostName = "wujie";
     networkmanager.enable = true;

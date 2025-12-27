@@ -17,7 +17,7 @@
     vscode.enable = true;
     zed.enable = true;
     cursor.enable = true;
-    # hx.enable = true;
+    helix.enable = true;
     default = "hx";
   };
 

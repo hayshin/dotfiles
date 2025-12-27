@@ -4,7 +4,6 @@
     ./stylix.nix
     ./shell
     ./yazi
-    ./helix
     ./zellij
   ];
 
