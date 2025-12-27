@@ -3,7 +3,6 @@
   imports = [
     ./stylix.nix
     ./shell
-    ./yazi
     ./zellij
   ];
 

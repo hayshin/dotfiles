@@ -21,6 +21,8 @@
     default = "hx";
   };
 
+  modules.programs.yazi.enable = true;
+
   modules.programs.terminals.enable = true;
   modules.desktop.hyprland.enable = true;
 }
