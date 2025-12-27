@@ -10,6 +10,7 @@
     fastfetch
     tree
     dust
+    tt
   ];
   programs = {
     bat = {

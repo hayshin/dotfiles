@@ -70,6 +70,8 @@ in
   suspend = "bash -c 'systemctl suspend; lock'";
   reboot = "systemctl reboot";
 
+  monkeytype = "tt";
+
   cat = "bat";
   zed = "zeditor";
   copy = "wl-copy";
