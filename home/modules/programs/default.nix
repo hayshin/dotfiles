@@ -4,6 +4,7 @@
     ./editors
     ./yazi
     ./zellij
+    ./shell
     ./terminals.nix
   ];
 }

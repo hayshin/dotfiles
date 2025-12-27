@@ -2,7 +2,6 @@
 {
   imports = [
     ./stylix.nix
-    ./shell
   ];
 
   home = {
