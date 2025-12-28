@@ -13,7 +13,6 @@
     # openfortivpn-webview-qt
     # qbittorrent
     # zathura
-    zoom-us
     # open-webui
   ];
 }

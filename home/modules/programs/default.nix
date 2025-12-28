@@ -5,6 +5,7 @@
     ./yazi
     ./zellij
     ./shell
+    ./development
     ./terminals.nix
   ];
 }

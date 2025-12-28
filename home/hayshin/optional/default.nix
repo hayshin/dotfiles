@@ -3,7 +3,6 @@
   imports = [
     ./office.nix
     ./media.nix
-    ./development
   ];
   home.packages = with pkgs; [
     discord

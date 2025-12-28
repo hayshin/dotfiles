@@ -32,6 +32,21 @@
     ssh.enable = true;
   };
 
+  modules.programs.development = {
+    git.enable = true;
+    frontend.enable = true;
+    dprint.enable = true;
+    languages = {
+      python.enable = true;
+      rust.enable = true;
+      go.enable = true;
+      cpp.enable = true;
+      nix.enable = true;
+      java.enable = true;
+      databases.enable = true;
+    };
+  };
+
   modules.programs.terminals.enable = true;
   modules.desktop.hyprland.enable = true;
 }

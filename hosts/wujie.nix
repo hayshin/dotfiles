@@ -54,7 +54,7 @@
 
   networking = {
     hostName = "wujie";
-    networkmanager.enable = true;
+    # networkmanager.enable = true;
     firewall.enable = false;
   };
 

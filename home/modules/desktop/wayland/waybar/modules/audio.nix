@@ -19,8 +19,8 @@
     ];
   };
 
-  on-click = "swayosd-client --output-volume mute-toggle";
-  on-click-right = "swayosd-client --input-volume mute-toggle";
-  on-click-middle = "pavucontrol";
+  on-click = "pavucontrol";
+  on-click-right = "swayosd-client --output-volume mute-toggle";
+  on-click-middle = "swayosd-client --input-volume mute-toggle";
   scroll-step = 0.5;
 }
